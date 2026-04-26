@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Complementos López</title>
+    <meta name="description" content="Consulta el catálogo orientativo de Complementos López con bolsos, mochilas, carteras, botellas, termos y otros complementos disponibles en tienda.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "index.html#top"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Catálogo",
+          "item": "catalogo.html"
+        }
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+<header class="header">
+    <div class="header-brand">
+        <a href="index.html#top" class="brand-link" aria-label="Ir al inicio">
+            <img src="imagen sin fondo 6.png" alt="Logo de Complementos López" class="brand-logo">
+            <h1>Complementos López</h1>
+        </a>
+        <div class="redes redes-brand">
+            <a href="https://www.instagram.com/complementos_lopez?igsh=ODFwa2NobmN1YTds" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/reparaciondecalzadoycomplemetoslopez?locale=es_ES" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="index.html#Contacto" aria-label="Ir a contacto"><i class="fa-solid fa-location-dot"></i></a>
+        </div>
+    </div>
+    <a href="index.html#Contacto" class="contador-link" aria-label="Ir a la sección de contacto y horario">
+        <p class="contador contador-horario"></p>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="header-panel" aria-label="Abrir menú principal">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div id="header-panel" class="header-panel">
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html#top">Inicio</a></li>
+                <li><a href="catalogo.html">Productos</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="index.html#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-tools">
+            <div class="buscador-header" role="search">
+                <button class="buscador-toggle" type="button" aria-label="Abrir buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="buscador-campo">
+                    <input type="search" class="buscador-input" placeholder="Buscar producto" aria-label="Buscar producto">
+                    <button class="buscador-cerrar" type="button" aria-label="Cerrar buscador">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="buscador-resultados" hidden></div>
+            </div>
+        </div>
+    </div>
+    <div class="favoritos-menu">
+        <button class="favoritos-toggle" type="button" aria-label="Abrir favoritos">
+            <i class="fa-solid fa-heart favoritos-icono"></i>
+            <span class="favoritos-contador">0</span>
+        </button>
+        <div class="favoritos-panel" hidden>
+            <p class="favoritos-vacio">Todavía no has marcado productos favoritos.</p>
+            <div class="favoritos-lista"></div>
+        </div>
+    </div>
+</header>
+
+<main id="contenido-principal">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="index.html#top">Inicio</a>
+    <span>/</span>
+    <span>Catálogo</span>
+</nav>
+
+<section id="Productos" class="productos catalogo-productos">
+    <h2 class="titulo-seccion">Catálogo</h2>
+    <p class="seccion-intro">
+        Aquí reunimos todos los productos que vayamos subiendo. En la portada solo aparece una selección inicial para que la página cargue más limpia y cómoda.
+    </p>
+
+    <div class="filtros">
+        <button class="filtro-btn active" type="button">Todos</button>
+        <button class="filtro-btn" type="button">Bolsos</button>
+        <button class="filtro-btn" type="button">Ropa</button>
+        <button class="filtro-btn" type="button">Tazas</button>
+        <button class="filtro-btn" type="button">Mochila</button>
+        <button class="filtro-btn" type="button">Carteras</button>
+        <button class="filtro-btn" type="button">Botellas</button>
+        <button class="filtro-btn" type="button">Otros</button>
+    </div>
+
+    <div class="grid-productos">
+        <article
+            class="producto"
+            data-producto-id="mochila-muse"
+            data-categoria="mochila"
+            data-img="Productos/Mochila antirrobo Muse.jpg.webp"
+            data-img-hover="Productos/Mochila antirrobo muse 2.jpg.webp"
+            data-img2="Productos/Mochila antirrobo muse 2.jpg.webp"
+            data-img3="Productos/MOCHILA ANTIRROBO MUSE 3.jpg.webp"
+            data-descripcion="Mochila antirrobo de estilo urbano, cómoda para el día a día y con un acabado elegante."
+            data-novedad="true">
+            <img src="Productos/Mochila antirrobo Muse.jpg.webp" alt="Mochila antirrobo Muse">
+            <h3>Mochila antirrobo Muse</h3>
+            <p class="precio">68,95€</p>
+        </article>
+
+        <article
+            class="producto"
+            data-producto-id="mochila-amphora"
+            data-categoria="mochila"
+            data-img="Productos/Mochila antirobo Amphora.jpg.webp"
+            data-descripcion="Mochila funcional con diseño actual y espacio interior pensado para acompañarte a diario."
+            data-novedad="false">
+            <img src="Productos/Mochila antirobo Amphora.jpg.webp" alt="Mochila antirrobo Amphora">
+            <h3>Mochila antirrobo Amphora</h3>
+            <p class="precio">68,95€</p>
+        </article>
+
+        <article
+            class="producto"
+            data-producto-id="botella-vivid-violet"
+            data-categoria="botellas"
+            data-img="Productos/Botella VIVID VIOLET.jpg.webp"
+            data-img-hover="Productos/Botella VIVID VIOLET 750 ml 2.jpg.webp"
+            data-img2="Productos/Botella VIVID VIOLET 750 ml 2.jpg.webp"
+            data-img3="Productos/Botella VIVID VIOLET 750 ml 3.jpg.webp"
+            data-descripcion="Botella reutilizable de 750 ml, ligera y práctica para llevar agua con estilo."
+            data-novedad="false">
+            <img src="Productos/Botella VIVID VIOLET.jpg.webp" alt="Botella Vivid Violet de 750 mililitros">
+            <h3>Botella VIVID VIOLET 750 ml</h3>
+            <p class="precio">29,95€</p>
+        </article>
+
+<!--BOTELLA INFANTIL - AFRICAN SAFARI 260 ml-->
+
+        <article
+            class="producto"
+            data-producto-id="botella-infantil-african-safari-260ml"
+            data-categoria="botellas"
+            data-img="Productos/BOTELLA INFANTIL - AFRICAN SAFARI 260ml 1.jpg.webp"
+            data-img-hover="Productos/BOTELLA INFANTIL - AFRICAN SAFARI 260ml 2.webp"
+            data-img2="Productos/BOTELLA INFANTIL - AFRICAN SAFARI 260ml 2.webp"
+            data-img3="Productos/BOTELLA INFANTIL - AFRICAN SAFARI 260ml 3.jpg.webp"
+            data-descripcion="Botella infantil African Safari de 260 ml, ligera y cómoda para peques."
+            data-novedad="false">
+            <img src="Productos/BOTELLA INFANTIL - AFRICAN SAFARI 260ml 1.jpg.webp" alt="Botella infantil African Safari 260 ml">
+            <h3>BOTELLA INFANTIL - AFRICAN SAFARI 260 ml</h3>
+            <p class="precio">Consultar</p>
+        </article>
+
+<!--TERMO PASTEL PINK 550 ml-->
+
+        <article
+            class="producto"
+            data-producto-id="termo-pastel-pink-550ml"
+            data-categoria="botellas"
+            data-img="Productos/TERMO PASTEL PINK 550ml 1.png.webp"
+            data-img-hover="Productos/TERMO PASTEL PINK 550ml 2.png.webp"
+            data-img2="Productos/TERMO PASTEL PINK 550ml 2.png.webp"
+            data-img3="Productos/TERMO PASTEL PINK 550ml 3.jpg.webp"
+            data-descripcion="Termo Pastel Pink con acabado suave y formato práctico para llevar bebidas a diario."
+            data-novedad="false">
+            <img src="Productos/TERMO PASTEL PINK 550ml 1.png.webp" alt="Termo Pastel Pink 550 ml">
+            <h3>TERMO PASTEL PINK 550 ml</h3>
+            <p class="precio">Consultar</p>
+        </article>
+
+<!--BOTELLAS DEPORTIVAS SPORT BRISBANE 950 ml-->
+
+        <article
+            class="producto"
+            data-producto-id="botella-sport-brisbane-950ml"
+            data-categoria="botellas"
+            data-img="Productos/BOTELLAS DEPORTIVAS SPORT BRISBANE 950 ml 1.jpg.webp"
+            data-img-hover="Productos/BOTELLAS DEPORTIVAS SPORT BRISBANE 950 ml 2.jpg.webp"
+            data-img2="Productos/BOTELLAS DEPORTIVAS SPORT BRISBANE 950 ml 2.jpg.webp"
+            data-img3="Productos/BOTELLAS DEPORTIVAS SPORT BRISBANE 950 ml 3.jpg.webp"
+            data-descripcion="Botella deportiva Sport Brisbane de 950 ml, pensada para acompañar entrenamientos y rutinas diarias."
+            data-novedad="false">
+            <img src="Productos/BOTELLAS DEPORTIVAS SPORT BRISBANE 950 ml 1.jpg.webp" alt="Botella deportiva Sport Brisbane 950 ml">
+            <h3>BOTELLAS DEPORTIVAS SPORT BRISBANE 950 ml</h3>
+            <p class="precio">34,95€</p>
+        </article>
+
+<!--BOTELLAS DEPORTIVAS SPORT LOS ANGELES 950 ml-->
+
+        <article
+            class="producto"
+            data-producto-id="botella-sport-los-angeles-950ml"
+            data-categoria="botellas"
+            data-img="Productos/BOTELLAS DEPORTIVAS SPORT LOS ANGELES 950ml 1.jpg.webp"
+            data-img-hover="Productos/BOTELLAS DEPORTIVAS SPORT LOS ANGELES 950ml 2.jpg.webp"
+            data-img2="Productos/BOTELLAS DEPORTIVAS SPORT LOS ANGELES 950ml 2.jpg.webp"
+            data-img3="Productos/BOTELLAS DEPORTIVAS SPORT LOS ANGELES 950ml 3.jpg.webp"
+            data-descripcion="Botella deportiva Sport Los Angeles de 950 ml, cómoda para llevar agua con estilo durante todo el día."
+            data-novedad="false">
+            <img src="Productos/BOTELLAS DEPORTIVAS SPORT LOS ANGELES 950ml 1.jpg.webp" alt="Botella deportiva Sport Los Angeles 950 ml">
+            <h3>BOTELLAS DEPORTIVAS SPORT LOS ANGELES 950 ml</h3>
+            <p class="precio">34,95€</p>
+        </article>
+
+<!--BOTELLAS DEPORTIVAS SPORT TOKYO 950 ml-->
+
+        <article
+            class="producto"
+            data-producto-id="botella-sport-tokyo-950ml"
+            data-categoria="botellas"
+            data-img="Productos/BOTELLAS DEPORTIVAS SPORT TOKYO 950ml 1.jpg.webp"
+            data-img-hover="Productos/BOTELLAS DEPORTIVAS SPORT TOKYO 950ml 2.jpg.webp"
+            data-img2="Productos/BOTELLAS DEPORTIVAS SPORT TOKYO 950ml 2.jpg.webp"
+            data-img3="Productos/BOTELLAS DEPORTIVAS SPORT TOKYO 950ml 3.jpg.webp"
+            data-descripcion="Botella deportiva Sport Tokyo de 950 ml, práctica para entrenar, pasear o llevar al trabajo."
+            data-novedad="false">
+            <img src="Productos/BOTELLAS DEPORTIVAS SPORT TOKYO 950ml 1.jpg.webp" alt="Botella deportiva Sport Tokyo 950 ml">
+            <h3>BOTELLAS DEPORTIVAS SPORT TOKYO 950 ml</h3>
+            <p class="precio">34,95€</p>
+        </article>
+
+<!--BOTELLAS DEPORTIVAS SPORT PARIS 950 ml-->
+
+        <article
+            class="producto"
+            data-producto-id="botella-sport-paris-950ml"
+            data-categoria="botellas"
+            data-img="Productos/BOTELLAS DEPORTIVAS SPORT PARIS 950ml 1.jpg.webp"
+            data-img-hover="Productos/BOTELLAS DEPORTIVAS SPORT PARIS 950ml 2.jpg.webp"
+            data-img2="Productos/BOTELLAS DEPORTIVAS SPORT PARIS 950ml 2.jpg.webp"
+            data-img3="Productos/BOTELLAS DEPORTIVAS SPORT PARIS 950ml 3.jpg.webp"
+            data-descripcion="Botella deportiva Sport Paris de 950 ml, resistente y fácil de llevar a diario."
+            data-novedad="false">
+            <img src="Productos/BOTELLAS DEPORTIVAS SPORT PARIS 950ml 1.jpg.webp" alt="Botella deportiva Sport Paris 950 ml">
+            <h3>BOTELLAS DEPORTIVAS SPORT PARIS 950 ml</h3>
+            <p class="precio">34,95€</p>
+        </article>
+
+        <article
+            class="producto"
+            data-producto-id="cinturon-cowboy"
+            data-categoria="otros"
+            data-img="Productos/CINTURON DE PIEL HEBILLA PLATEADA COWBOY CUERO.jpg"
+            data-descripcion="Cinturón de piel con hebilla plateada, una pieza versátil para elevar cualquier look."
+            data-novedad="false">
+            <img src="Productos/CINTURON DE PIEL HEBILLA PLATEADA COWBOY CUERO.jpg" alt="Cinturón de piel cowboy con hebilla plateada">
+            <h3>Cinturón de piel hebilla plateada cowboy cuero</h3>
+            <p class="precio">
+                <span class="precio-antiguo">45,00€</span>
+                <span class="precio-nuevo">36,29€</span>
+            </p>
+        </article>
+
+        <article
+            class="producto"
+            data-producto-id="bolso-eikon"
+            data-categoria="bolsos"
+            data-img="Productos/BOLSO DE ASA CORTA EIKON 1.jpg.webp"
+            data-img-hover="Productos/BOLSO DE ASA CORTA EIKON 2.jpg.webp"
+            data-img2="Productos/BOLSO DE ASA CORTA EIKON 2.jpg.webp"
+            data-img3="Productos/BOLSO DE ASA CORTA EIKON 3.jpg.webp"
+            data-descripcion="Bolso de asa corta con un formato elegante y cómodo para elevar cualquier look diario."
+            data-novedad="false">
+            <img src="Productos/BOLSO DE ASA CORTA EIKON 1.jpg.webp" alt="Bolso de asa corta eikon">
+            <h3>BOLSO DE ASA CORTA EIKON</h3>
+            <p class="precio">---</p>
+        </article>
+
+        <article
+            class="producto"
+            data-producto-id="bolso-hobo"
+            data-categoria="bolsos"
+            data-img="Productos/BOLSO HOBO AMPHORA 1.jpg.webp"
+            data-img-hover="Productos/BOLSO HOBO AMPHORA 2.jpg.webp"
+            data-img2="Productos/BOLSO HOBO AMPHORA 2.jpg.webp"
+            data-img3="Productos/BOLSO HOBO AMPHORA 3.jpg.webp"
+            data-descripcion="Bolso hobo de estilo actual, amplio y práctico para el día a día."
+            data-novedad="false">
+            <img src="Productos/BOLSO HOBO AMPHORA 1.jpg.webp" alt="Bolso hobo Amphora">
+            <h3>BOLSO HOBO AMPHORA</h3>
+            <p class="precio">58,95€</p>
+        </article>
+
+        <article
+            class="producto"
+            data-producto-id="cartera-olympia"
+            data-categoria="carteras"
+            data-img="Productos/BILLETERO PEQUENO OLYMPIA 1.jpg.webp"
+            data-img-hover="Productos/BILLETERO PEQUENO OLYMPIA 2.jpg.webp"
+            data-img2="Productos/BILLETERO PEQUENO OLYMPIA 2.jpg.webp"
+            data-img3="Productos/BILLETERO PEQUENO OLYMPIA 3.jpg.webp"
+            data-descripcion="Cartera compacta y práctica, perfecta para llevar lo esencial con orden."
+            data-novedad="false">
+            <img src="Productos/BILLETERO PEQUENO OLYMPIA 1.jpg.webp" alt="Cartera pequeña Olympia">
+            <h3>CARTERA PEQUEÑA OLYMPIA</h3>
+            <p class="precio">22,95€</p>
+        </article>
+
+<!--MOCHILA CON BOLSILLO FRONTAL MUSE-->
+
+        <article
+            class="producto"
+            data-producto-id="mochila-frontal-muse"
+            data-categoria="mochila"
+            data-img="Productos/MOCHILA CON BOLSILLO FRONTAL MUSE 1.jpg.webp"
+            data-img-hover="Productos/MOCHILA CON BOLSILLO FRONTAL MUSE 2.jpg.webp"
+            data-img2="Productos/MOCHILA CON BOLSILLO FRONTAL MUSE 2.jpg.webp"
+            data-img3="Productos/MOCHILA CON BOLSILLO FRONTAL MUSE 3.jpg.webp"
+            data-descripcion="Mochila versátil con bolsillo frontal y formato cómodo para uso diario."
+            data-novedad="false">
+            <img src="Productos/MOCHILA CON BOLSILLO FRONTAL MUSE 1.jpg.webp" alt="Mochila con bolsillo frontal Muse">
+            <h3>MOCHILA CON BOLSILLO FRONTAL MUSE</h3>
+            <p class="precio">68,95€</p>
+        </article>
+
+<!--BOLSO BANDOLERA AURALIS-->
+            
+        <article
+            class="producto"
+            data-producto-id="bolso-bandolera-auralis"
+            data-categoria="bolsos"
+            data-img="Productos/BOLSO BANDOLERA AURALIS 1.jpg.webp"
+            data-img-hover="Productos/BOLSO BANDOLERA AURALIS 2.jpg.webp"
+            data-img2="Productos/BOLSO BANDOLERA AURALIS 2.jpg.webp"
+            data-img3="Productos/BOLSO BANDOLERA AURALIS 3.jpg.webp"
+            data-descripcion="Bandolera ligera y funcional, pensada para moverte con comodidad y estilo."
+            data-novedad="false">
+            <img src="Productos/BOLSO BANDOLERA AURALIS 1.jpg.webp" alt="Bolso bandolera Auralis">
+            <h3>BOLSO BANDOLERA AURALIS</h3>
+            <p class="precio">57,95€</p>
+        </article>
+
+<!--MOCHILA CUADRADA MUSE-->
+            
+        <article
+            class="producto"
+            data-producto-id="mochila-cuadrada-muse"
+            data-categoria="mochila"
+            data-img="Productos/MOCHILA CUADRADA MUSE 1.jpg.webp"
+            data-img-hover="Productos/MOCHILA CUADRADA MUSE 2.jpg.webp"
+            data-img2="Productos/MOCHILA CUADRADA MUSE 2.jpg.webp"
+            data-img3="Productos/MOCHILA CUADRADA MUSE 3.jpg.webp"
+            data-descripcion="Mochila de silueta estructurada con un acabado moderno y muy combinable."
+            data-novedad="false">
+            <img src="Productos/MOCHILA CUADRADA MUSE 1.jpg.webp" alt="Mochila cuadrada Muse">
+            <h3>MOCHILA CUADRADA MUSE</h3>
+            <p class="precio">65,95€</p>
+        </article>
+
+<!--MONEDERO PEQUEÑO RFID MUSE-->
+            
+        <article
+            class="producto"
+            data-producto-id="monedero-rfid-muse"
+            data-categoria="carteras"
+            data-img="Productos/MONEDERO PEQUENO RFID MUSE 1.jpg.webp"
+            data-img-hover="Productos/MONEDERO PEQUENO RFID MUSE 2.jpg.webp"
+            data-img2="Productos/MONEDERO PEQUENO RFID MUSE 2.jpg.webp"
+            data-img3="Productos/MONEDERO PEQUENO RFID MUSE 3.jpg.webp"
+            data-descripcion="Monedero pequeño con protección RFID y formato compacto para el día a día."
+            data-novedad="false">
+            <img src="Productos/MONEDERO PEQUENO RFID MUSE 1.jpg.webp" alt="Monedero pequeño RFID Muse">
+            <h3>MONEDERO PEQUEÑO RFID MUSE</h3>
+            <p class="precio">22,95€</p>
+        </article>
+
+<!--MOCHILA PEQUEÑA OLYMPIA-->
+            
+        <article
+            class="producto"
+            data-producto-id="mochila-pequena-olympia"
+            data-categoria="mochila"
+            data-img="Productos/MOCHILA PEQUENA OLYMPIA 1.jpg.webp"
+            data-img-hover="Productos/MOCHILA PEQUENA OLYMPIA 2.jpg.webp"
+            data-img2="Productos/MOCHILA PEQUENA OLYMPIA 2.jpg.webp"
+            data-img3="Productos/MOCHILA PEQUENA OLYMPIA 3.jpg.webp"
+            data-descripcion="Mochila pequeña y práctica, ideal para llevar lo imprescindible con estilo."
+            data-novedad="false">
+            <img src="Productos/MOCHILA PEQUENA OLYMPIA 1.jpg.webp" alt="Mochila pequeña Olympia">
+            <h3>MOCHILA PEQUEÑA OLYMPIA</h3>
+            <p class="precio">59,95€</p>
+        </article>
+
+<!--MOCHILA MUSE-->
+
+        <article
+            class="producto"
+            data-producto-id="mochila-muse-clasica"
+            data-categoria="mochila"
+            data-img="Productos/mochila muse 1.jpg.webp"
+            data-img-hover="Productos/mochila muse 2.jpg.webp"
+            data-img2="Productos/mochila muse 2.jpg.webp"
+            data-img3="Productos/mochila muse 3.jpg.webp"
+            data-descripcion="Mochila Muse práctica y versátil para acompañar el día a día."
+            data-novedad="false">
+            <img src="Productos/mochila muse 1.jpg.webp" alt="Mochila Muse">
+            <h3>MOCHILA MUSE</h3>
+            <p class="precio">64,95€</p>
+        </article>
+
+<!--MOCHILA AURALIS-->
+
+        <article
+            class="producto"
+            data-producto-id="mochila-auralis"
+            data-categoria="mochila"
+            data-img="Productos/MOCHILA AURALIS 1.jpg.webp"
+            data-img-hover="Productos/MOCHILA AURALIS 2.jpg.webp"
+            data-img2="Productos/MOCHILA AURALIS 2.jpg.webp"
+            data-img3="Productos/MOCHILA AURALIS 3.jpg.webp"
+            data-descripcion="Mochila Auralis cómoda y práctica para el día a día."
+            data-novedad="false">
+            <img src="Productos/MOCHILA AURALIS 1.jpg.webp" alt="Mochila Auralis">
+            <h3>MOCHILA AURALIS</h3>
+            <p class="precio">68,95€</p>
+        </article>
+
+<!--RIÑONERA AURALIS-->
+
+        <article
+            class="producto"
+            data-producto-id="rinonera-auralis"
+            data-categoria="bolsos"
+            data-img="Productos/RIÑONERA AURALIS 1.jpg.webp"
+            data-img-hover="Productos/RIÑONERA AURALIS 2.jpg.webp"
+            data-img2="Productos/RIÑONERA AURALIS 2.jpg.webp"
+            data-img3="Productos/RIÑONERA AURALIS 3.jpg.webp"
+            data-descripcion="Riñonera Auralis ligera y funcional para llevar lo imprescindible."
+            data-novedad="false">
+            <img src="Productos/RIÑONERA AURALIS 1.jpg.webp" alt="Riñonera Auralis">
+            <h3>RIÑONERA AURALIS</h3>
+            <p class="precio">44,95€</p>
+        </article>
+
+<!--BILLETERO BLANDO OLYMPIA-->
+
+        <article
+            class="producto"
+            data-producto-id="billetero-blando-olympia"
+            data-categoria="carteras"
+            data-img="Productos/BILLETERO BLANDO OLYMPIA 1.jpg.webp"
+            data-img-hover="Productos/BILLETERO BLANDO OLYMPIA 2.jpg.webp"
+            data-img2="Productos/BILLETERO BLANDO OLYMPIA 2.jpg.webp"
+            data-img3="Productos/BILLETERO BLANDO OLYMPIA 3.jpg.webp"
+            data-descripcion="Billetero blando Olympia con formato cómodo para organizar tarjetas y efectivo."
+            data-novedad="false">
+            <img src="Productos/BILLETERO BLANDO OLYMPIA 1.jpg.webp" alt="Billetero blando Olympia">
+            <h3>BILLETERO BLANDO OLYMPIA</h3>
+            <p class="precio">35,95€</p>
+        </article>
+
+<!--BANDOLERA ESTAMPADA SOPHIA-->
+
+        <article
+            class="producto"
+            data-producto-id="bandolera-estampada-sophia"
+            data-categoria="bolsos"
+            data-img="Productos/BANDOLERA ESTAMPADA SOPHIA 1.jpg.webp"
+            data-img-hover="Productos/BANDOLERA ESTAMPADA SOPHIA 2.jpg.webp"
+            data-img2="Productos/BANDOLERA ESTAMPADA SOPHIA 2.jpg.webp"
+            data-img3="Productos/BANDOLERA ESTAMPADA SOPHIA 3.jpg.webp"
+            data-descripcion="Bandolera estampada Sophia con diseño actual y formato práctico."
+            data-novedad="false">
+            <img src="Productos/BANDOLERA ESTAMPADA SOPHIA 1.jpg.webp" alt="Bandolera estampada Sophia">
+            <h3>BANDOLERA ESTAMPADA SOPHIA</h3>
+            <p class="precio">55,95€</p>
+        </article>
+
+<!--BILLETERO RFID AMPHORA-->
+
+        <article
+            class="producto"
+            data-producto-id="billetero-rfid-amphora"
+            data-categoria="carteras"
+            data-img="Productos/BILLETERO RFID AMPHORA 1.jpg.webp"
+            data-img-hover="Productos/BILLETERO RFID AMPHORA 2.jpg.webp"
+            data-img2="Productos/BILLETERO RFID AMPHORA 2.jpg.webp"
+            data-img3="Productos/BILLETERO RFID AMPHORA 3.jpg.webp"
+            data-descripcion="Billetero RFID Amphora compacto, práctico y con protección para tarjetas."
+            data-novedad="false">
+            <img src="Productos/BILLETERO RFID AMPHORA 1.jpg.webp" alt="Billetero RFID Amphora">
+            <h3>BILLETERO RFID AMPHORA</h3>
+            <p class="precio">30,95€</p>
+        </article>
+
+<!--BANDOLERA ESTAMPADA AMPHORA-->
+
+        <article
+            class="producto"
+            data-producto-id="bandolera-estampada-amphora"
+            data-categoria="bolsos"
+            data-img="Productos/BANDOLERA ESTAMPADA AMPHORA 1.jpg.webp"
+            data-img-hover="Productos/BANDOLERA ESTAMPADA AMPHORA 2.jpg.webp"
+            data-img2="Productos/BANDOLERA ESTAMPADA AMPHORA 2.jpg.webp"
+            data-img3="Productos/BANDOLERA ESTAMPADA AMPHORA 3.jpg.webp"
+            data-descripcion="Bandolera estampada Amphora con espacio cómodo y estilo fácil de combinar."
+            data-novedad="false">
+            <img src="Productos/BANDOLERA ESTAMPADA AMPHORA 1.jpg.webp" alt="Bandolera estampada Amphora">
+            <h3>BANDOLERA ESTAMPADA AMPHORA</h3>
+            <p class="precio">60,95€</p>
+        </article>
+
+<!--MOCHILA MEDIANA AURALIS-->
+
+        <article
+            class="producto"
+            data-producto-id="mochila-mediana-auralis"
+            data-categoria="mochila"
+            data-img="Productos/MOCHILA MEDIANA AURALIS 1.jpg.webp"
+            data-img-hover="Productos/MOCHILA MEDIANA AURALIS 2.jpg.webp"
+            data-img2="Productos/MOCHILA MEDIANA AURALIS 2.jpg.webp"
+            data-img3="Productos/MOCHILA MEDIANA AURALIS 3.jpg.webp"
+            data-descripcion="Mochila mediana Auralis cómoda y práctica para acompañar el día a día."
+            data-novedad="false">
+            <img src="Productos/MOCHILA MEDIANA AURALIS 1.jpg.webp" alt="Mochila mediana Auralis">
+            <h3>MOCHILA MEDIANA AURALIS</h3>
+            <p class="precio">65,95€</p>
+        </article>
+
+<!--BOLSO DE PLAYA MUSE-->
+
+        <article
+            class="producto"
+            data-producto-id="bolso-playa-muse"
+            data-categoria="bolsos"
+            data-img="Productos/BOLSO-DE-PLAYA-MUSE-PRECIO-DE-OFERTA-1.jpg.webp"
+            data-img-hover="Productos/BOLSO-DE-PLAYA-MUSE-PRECIO-DE-OFERTA-2.jpg.webp"
+            data-img2="Productos/BOLSO-DE-PLAYA-MUSE-PRECIO-DE-OFERTA-2.jpg.webp"
+            data-img3="Productos/BOLSO-DE-PLAYA-MUSE-PRECIO-DE-OFERTA-3.jpg.webp"
+            data-descripcion="Bolso de playa Muse amplio y ligero para llevar lo necesario con comodidad."
+            data-novedad="false">
+            <img src="Productos/BOLSO-DE-PLAYA-MUSE-PRECIO-DE-OFERTA-1.jpg.webp" alt="Bolso de playa Muse">
+            <h3>BOLSO DE PLAYA MUSE</h3>
+            <p class="precio">36,95€</p>
+        </article>
+
+<!--BOLSO DE PLAYA GRANDE SMART-->
+
+        <article
+            class="producto"
+            data-producto-id="bolso-playa-grande-smart"
+            data-categoria="bolsos"
+            data-img="Productos/BOLSO DE PLAYA GRANDE SMART 1.jpg.webp"
+            data-img-hover="Productos/BOLSO DE PLAYA GRANDE SMART 2.jpg.webp"
+            data-img2="Productos/BOLSO DE PLAYA GRANDE SMART 2.jpg.webp"
+            data-img3="Productos/BOLSO DE PLAYA GRANDE SMART 3.jpg.webp"
+            data-descripcion="Bolso de playa grande Smart con espacio amplio y formato práctico."
+            data-novedad="false">
+            <img src="Productos/BOLSO DE PLAYA GRANDE SMART 1.jpg.webp" alt="Bolso de playa grande Smart">
+            <h3>BOLSO DE PLAYA GRANDE SMART</h3>
+            <p class="precio">39,95€</p>
+        </article>
+
+<!--MONEDERO GRANDE FLEXIBLE RFID MUSE-->
+
+        <article
+            class="producto"
+            data-producto-id="monedero-grande-flexible-rfid-muse"
+            data-categoria="carteras"
+            data-img="Productos/MONEDERO GRANDE FLEXIBLE RFID MUSE 1.jpg"
+            data-img-hover="Productos/MONEDERO GRANDE FLEXIBLE RFID MUSE 2.jpg.webp"
+            data-img2="Productos/MONEDERO GRANDE FLEXIBLE RFID MUSE 2.jpg.webp"
+            data-img3="Productos/MONEDERO GRANDE FLEXIBLE RFID MUSE 3.jpg.webp"
+            data-descripcion="Monedero grande flexible RFID Muse con espacio cómodo para organizar lo esencial."
+            data-novedad="false">
+            <img src="Productos/MONEDERO GRANDE FLEXIBLE RFID MUSE 1.jpg" alt="Monedero grande flexible RFID Muse">
+            <h3>MONEDERO GRANDE FLEXIBLE RFID MUSE</h3>
+            <p class="precio">35,95€</p>
+        </article>
+
+<!--NECESER SOPHIA-->
+
+        <article
+            class="producto"
+            data-producto-id="neceser-sophia"
+            data-categoria="bolsos"
+            data-img="Productos/NECESER SOPHIA 1.jpg"
+            data-img-hover="Productos/NECESER SOPHIA 2.jpg"
+            data-img2="Productos/NECESER SOPHIA 2.jpg"
+            data-img3="Productos/NECESER SOPHIA 3.jpg.webp"
+            data-descripcion="Neceser Sophia compacto y práctico para pequeños imprescindibles."
+            data-novedad="false">
+            <img src="Productos/NECESER SOPHIA 1.jpg" alt="Neceser Sophia">
+            <h3>NECESER SOPHIA</h3>
+            <p class="precio">12,95€</p>
+        </article>
+
+<!--PARAGUAS MANUAL ALMA-->
+
+        <article
+            class="producto"
+            data-producto-id="paraguas-manual-alma"
+            data-categoria="otros"
+            data-img="Productos/PARAGUAS-MANUAL-ALMA-1.jpg.webp"
+            data-img-hover="Productos/PARAGUAS-MANUAL-ALMA-2.jpg.webp"
+            data-img2="Productos/PARAGUAS-MANUAL-ALMA-2.jpg.webp"
+            data-img3="Productos/PARAGUAS-MANUAL-ALMA-3.jpg.webp"
+            data-descripcion="Paraguas manual Alma ligero y fácil de llevar."
+            data-novedad="false">
+            <img src="Productos/PARAGUAS-MANUAL-ALMA-1.jpg.webp" alt="Paraguas manual Alma">
+            <h3>PARAGUAS MANUAL ALMA</h3>
+            <p class="precio">21,95€</p>
+        </article>
+
+<!--TAZA MUSE-->
+
+        <article
+            class="producto"
+            data-producto-id="taza-muse"
+            data-categoria="tazas"
+            data-img="Productos/TAZA MUSE 1.jpg"
+            data-img-hover="Productos/TAZA MUSE 2.jpg.webp"
+            data-img2="Productos/TAZA MUSE 2.jpg.webp"
+            data-img3="Productos/TAZA MUSE 3.jpg.webp"
+            data-descripcion="Taza Muse con diseño cuidado para uso diario o regalo."
+            data-novedad="false">
+            <img src="Productos/TAZA MUSE 1.jpg" alt="Taza Muse">
+            <h3>TAZA MUSE</h3>
+            <p class="precio">10,95€</p>
+        </article>
+
+<!--TAZA AMPHORA-->
+
+        <article
+            class="producto"
+            data-producto-id="taza-amphora"
+            data-categoria="tazas"
+            data-img="Productos/TAZA AMPHORA 1.jpg"
+            data-img-hover="Productos/TAZA AMPHORA 2.jpg.webp"
+            data-img2="Productos/TAZA AMPHORA 2.jpg.webp"
+            data-img3="Productos/TAZA AMPHORA 3.jpg.webp"
+            data-descripcion="Taza Amphora con diseño cuidado para uso diario o regalo."
+            data-novedad="false">
+            <img src="Productos/TAZA AMPHORA 1.jpg" alt="Taza Amphora">
+            <h3>TAZA AMPHORA</h3>
+            <p class="precio">10,95€</p>
+        </article>
+
+<!--TAZA EIKON-->
+
+        <article
+            class="producto"
+            data-producto-id="taza-eikon"
+            data-categoria="tazas"
+            data-img="Productos/TAZA EIKON 1.jpg"
+            data-img-hover="Productos/TAZA EIKON 2.jpg.webp"
+            data-img2="Productos/TAZA EIKON 2.jpg.webp"
+            data-img3="Productos/TAZA EIKON 3.jpg.webp"
+            data-descripcion="Taza Eikon con diseño cuidado para uso diario o regalo."
+            data-novedad="false">
+            <img src="Productos/TAZA EIKON 1.jpg" alt="Taza Eikon">
+            <h3>TAZA EIKON</h3>
+            <p class="precio">10,95€</p>
+        </article>
+
+<!--CARTERA BILLETERA PIEL CON GRABADO Y COSTURAS EN CONTRASTE NEGRO-->
+
+        <article
+            class="producto"
+            data-producto-id="cartera-billetera-piel-grabado-costuras-negro"
+            data-categoria="carteras"
+            data-img="Productos/CARTERA BILLETERA PIEL CON GRABADO Y COSTURAS EN CONTRASTE NEGRO 1.jpg"
+            data-img-hover="Productos/CARTERA BILLETERA PIEL CON GRABADO Y COSTURAS EN CONTRASTE NEGRO 2.jpg"
+            data-img2="Productos/CARTERA BILLETERA PIEL CON GRABADO Y COSTURAS EN CONTRASTE NEGRO 2.jpg"
+            data-img3="Productos/CARTERA BILLETERA PIEL CON GRABADO Y COSTURAS EN CONTRASTE NEGRO 3.jpg"
+            data-descripcion="Cartera billetera de piel negra con grabado y costuras en contraste."
+            data-novedad="false">
+            <img src="Productos/CARTERA BILLETERA PIEL CON GRABADO Y COSTURAS EN CONTRASTE NEGRO 1.jpg" alt="Cartera billetera piel con grabado y costuras en contraste negro">
+            <h3>CARTERA BILLETERA PIEL CON GRABADO Y COSTURAS EN CONTRASTE NEGRO</h3>
+            <p class="precio">33,99€</p>
+        </article>
+
+<!--CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR-->
+
+        <article
+            class="producto"
+            data-producto-id="cartera-pequena-billetera-monedero-bicolor"
+            data-categoria="carteras"
+            data-img="Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 1.jpg"
+            data-img-hover="Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 2.jpg"
+            data-img2="Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 2.jpg"
+            data-img3="Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 3.jpg"
+            data-descripcion="Cartera pequeña bicolor con billetera y monedero integrados."
+            data-novedad="false">
+            <img src="Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 1.jpg" alt="Cartera pequeña con billetera monedero bicolor">
+            <h3>CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR</h3>
+            <p class="precio">27,99€</p>
+        </article>
+
+<!--CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA-->
+
+        <article
+            class="producto"
+            data-producto-id="cartera-billetera-cierre-boton-llavero-piel-negra"
+            data-categoria="carteras"
+            data-img="Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  1.jpg"
+            data-img-hover="Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  2.jpg"
+            data-img2="Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  2.jpg"
+            data-img3="Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  3.jpg"
+            data-descripcion="Cartera billetera de piel negra con cierre de botón y llavero."
+            data-novedad="false">
+            <img src="Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  1.jpg" alt="Cartera billetera con cierre botón y llavero piel negra">
+            <h3>CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA</h3>
+            <p class="precio">26,98€</p>
+        </article>
+
+<!--MOCHILA ESCOLAR FREEDOM-->
+
+        <article
+            class="producto"
+            data-producto-id="mochila-escolar-freedom"
+            data-categoria="mochila"
+            data-img="Productos/MOCHILA ESCOLAR FREEDOM 1.jpg"
+            data-img-hover="Productos/MOCHILA ESCOLAR FREEDOM 2.jpg"
+            data-img2="Productos/MOCHILA ESCOLAR FREEDOM 2.jpg"
+            data-img3="Productos/MOCHILA ESCOLAR FREEDOM 3.jpg"
+            data-descripcion="Mochila escolar Freedom con capacidad práctica para clase y actividades."
+            data-novedad="false">
+            <img src="Productos/MOCHILA ESCOLAR FREEDOM 1.jpg" alt="Mochila escolar Freedom">
+            <h3>MOCHILA ESCOLAR FREEDOM</h3>
+            <p class="precio">44,99€</p>
+        </article>
+
+<!--MOCHILA INFANTIL LIGHTNING SKY-->
+
+        <article
+            class="producto"
+            data-producto-id="mochila-infantil-lightning-sky"
+            data-categoria="mochila"
+            data-img="Productos/MOCHILA INFANTIL LIGHTNING SKY 1.jpg"
+            data-img-hover="Productos/MOCHILA INFANTIL LIGHTNING SKY 2.jpg"
+            data-img2="Productos/MOCHILA INFANTIL LIGHTNING SKY 2.jpg"
+            data-img3="Productos/MOCHILA INFANTIL LIGHTNING SKY 3.jpg"
+            data-descripcion="Mochila infantil Lightning Sky ligera y cómoda para el día a día."
+            data-novedad="false">
+            <img src="Productos/MOCHILA INFANTIL LIGHTNING SKY 1.jpg" alt="Mochila infantil Lightning Sky">
+            <h3>MOCHILA INFANTIL LIGHTNING SKY</h3>
+            <p class="precio">28,99€</p>
+        </article>
+
+<!--MOCHILA INFANTIL START SKY-->
+
+        <article
+            class="producto"
+            data-producto-id="mochila-infantil-start-sky"
+            data-categoria="mochila"
+            data-img="Productos/MOCHILA INFANTIL START SKY 1.jpg"
+            data-img-hover="Productos/MOCHILA INFANTIL START SKY 2.jpg"
+            data-img2="Productos/MOCHILA INFANTIL START SKY 2.jpg"
+            data-img3="Productos/MOCHILA INFANTIL START SKY 3.jpg"
+            data-descripcion="Mochila infantil Start Sky ligera y cómoda para el día a día."
+            data-novedad="false">
+            <img src="Productos/MOCHILA INFANTIL START SKY 1.jpg" alt="Mochila infantil Start Sky">
+            <h3>MOCHILA INFANTIL START SKY</h3>
+            <p class="precio">28,99€</p>
+        </article>
+
+<!--MOCHILA INFANTIL SUN SKY-->
+
+        <article
+            class="producto"
+            data-producto-id="mochila-infantil-sun-sky"
+            data-categoria="mochila"
+            data-img="Productos/MOCHILA INFANTIL SUN SKY 1.jpg"
+            data-img-hover="Productos/MOCHILA INFANTIL SUN SKY 2.jpg"
+            data-img2="Productos/MOCHILA INFANTIL SUN SKY 2.jpg"
+            data-img3="Productos/MOCHILA INFANTIL SUN SKY 3.jpg"
+            data-descripcion="Mochila infantil Sun Sky ligera y cómoda para el día a día."
+            data-novedad="false">
+            <img src="Productos/MOCHILA INFANTIL SUN SKY 1.jpg" alt="Mochila infantil Sun Sky">
+            <h3>MOCHILA INFANTIL SUN SKY</h3>
+            <p class="precio">28,99€</p>
+        </article>
+
+<!--MOCHILA INFANTIL CLOUD SKY-->
+
+        <article
+            class="producto"
+            data-producto-id="mochila-infantil-cloud-sky"
+            data-categoria="mochila"
+            data-img="Productos/MOCHILA INFANTIL CLOUD SKY 1.jpg"
+            data-img-hover="Productos/MOCHILA INFANTIL CLOUD SKY 2.jpg"
+            data-img2="Productos/MOCHILA INFANTIL CLOUD SKY 2.jpg"
+            data-img3="Productos/MOCHILA INFANTIL CLOUD SKY 3.jpg"
+            data-descripcion="Mochila infantil Cloud Sky ligera y cómoda para el día a día."
+            data-novedad="false">
+            <img src="Productos/MOCHILA INFANTIL CLOUD SKY 1.jpg" alt="Mochila infantil Cloud Sky">
+            <h3>MOCHILA INFANTIL CLOUD SKY</h3>
+            <p class="precio">28,99€</p>
+        </article>
+
+
+    </div>
+
+    <div class="productos-cta">
+        <a href="index.html#Contacto" class="btn btn-outline-dark">Consultar más productos en tienda</a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-superior">
+        <div class="footer-brand">
+            <a href="index.html#top" class="footer-logo-link" aria-label="Ir al inicio de Complementos López">
+                <img src="imagen sin fondo 6.png" alt="Logo de Complementos López" class="footer-logo">
+            </a>
+            <p class="footer-brand-texto">Moda, complementos y atención cercana en Nava de la Asunción.</p>
+        </div>
+
+        <div class="footer-columna">
+            <h3>Dirección</h3>
+            <p>Plaza del Sedeño n.º 1</p>
+            <p>Nava de la Asunción, Segovia</p>
+            <p>Teléfono: 689 15 43 55</p>
+        </div>
+
+        <div class="footer-columna">
+            <h3>Navegación</h3>
+            <div class="footer-nav-grid">
+                <a href="index.html#top">Inicio</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="catalogo.html">Productos</a>
+                <a href="index.html#Contacto">Contacto</a>
+                <a href="galeria.html">Galería</a>
+            </div>
+        </div>
+
+        <div class="footer-columna footer-columna-placeholder">
+            <h3>Legal</h3>
+            <a href="aviso-legal.html">Aviso legal</a>
+            <a href="privacidad.html">Privacidad</a>
+            <a href="cookies.html">Cookies</a>
+            <a href="accesibilidad.html">Accesibilidad</a>
+        </div>
+    </div>
+
+    <div class="footer-copy">
+        <p>Copyright © 2026 | Complementos López</p>
+    </div>
+</footer>
+
+</body>
+</html>

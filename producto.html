@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto - Complementos López</title>
+    <meta name="description" content="Ficha de producto de Complementos López con imágenes, precio orientativo, disponibilidad y datos de contacto para visitar la tienda.">
+    <script id="producto-breadcrumb-schema" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "index.html#top"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Catálogo",
+          "item": "catalogo.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Producto",
+          "item": "producto.html"
+        }
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+<header class="header">
+    <div class="header-brand">
+        <a href="index.html#top" class="brand-link" aria-label="Ir al inicio">
+            <img src="imagen sin fondo 6.png" alt="Logo de Complementos López" class="brand-logo">
+            <h1>Complementos López</h1>
+        </a>
+        <div class="redes redes-brand">
+            <a href="https://www.instagram.com/complementos_lopez?igsh=ODFwa2NobmN1YTds" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/reparaciondecalzadoycomplemetoslopez?locale=es_ES" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="index.html#Contacto" aria-label="Ir a contacto"><i class="fa-solid fa-location-dot"></i></a>
+        </div>
+    </div>
+    <a href="index.html#Contacto" class="contador-link" aria-label="Ir a la sección de contacto y horario">
+        <p class="contador contador-horario"></p>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="header-panel" aria-label="Abrir menú principal">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div id="header-panel" class="header-panel">
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html#top">Inicio</a></li>
+                <li><a href="catalogo.html">Productos</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="index.html#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-tools">
+            <div class="buscador-header" role="search">
+                <button class="buscador-toggle" type="button" aria-label="Abrir buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="buscador-campo">
+                    <input type="search" class="buscador-input" placeholder="Buscar producto" aria-label="Buscar producto">
+                    <button class="buscador-cerrar" type="button" aria-label="Cerrar buscador">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="buscador-resultados" hidden></div>
+            </div>
+        </div>
+    </div>
+    <div class="favoritos-menu">
+        <button class="favoritos-toggle" type="button" aria-label="Abrir favoritos">
+            <i class="fa-solid fa-heart favoritos-icono"></i>
+            <span class="favoritos-contador">0</span>
+        </button>
+        <div class="favoritos-panel" hidden>
+            <p class="favoritos-vacio">Todavía no has marcado productos favoritos.</p>
+            <div class="favoritos-lista"></div>
+        </div>
+    </div>
+</header>
+
+<main id="contenido-principal">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="index.html#top">Inicio</a>
+    <span>/</span>
+    <a href="catalogo.html">Productos</a>
+    <span>/</span>
+    <span id="breadcrumb-actual">Producto</span>
+</nav>
+
+<section class="producto-individual">
+    <div class="producto-container">
+
+        <div class="producto-img">
+            <div class="producto-img-principal">
+                <button id="producto-prev" class="producto-flecha producto-flecha-prev" type="button" aria-label="Ver foto anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <img id="producto-img" src="" alt="">
+                <button id="producto-next" class="producto-flecha producto-flecha-next" type="button" aria-label="Ver foto siguiente">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+            <div id="miniaturas" class="miniaturas"></div>
+        </div>
+
+        <div class="producto-info">
+            <div id="producto-etiquetas" class="producto-etiquetas"></div>
+            <h2 id="producto-nombre">Nombre producto</h2>
+            <p id="producto-precio" class="precio-producto">Precio</p>
+            <p id="producto-descripcion" class="producto-descripcion">Descripción del producto.</p>
+            <div id="producto-capacidades" class="producto-capacidades" hidden></div>
+
+            <div class="producto-acciones">
+                <button id="producto-consultar" class="btn-comprar" type="button">Consultar disponibilidad</button>
+                <button id="producto-favorito" class="btn-favorito-producto" type="button" aria-pressed="false">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Añadir a favoritos</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="relacionados">
+  <h3>Productos relacionados</h3>
+  <div id="relacionados-grid" class="grid-productos"></div>
+</section>
+
+<div id="disponibilidad-backdrop" class="disponibilidad-backdrop" hidden>
+    <div class="disponibilidad-modal" role="dialog" aria-modal="true" aria-labelledby="disponibilidad-titulo">
+        <button id="disponibilidad-cerrar" class="disponibilidad-cerrar" type="button" aria-label="Cerrar ventana de disponibilidad">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="disponibilidad-estado">
+            <h3 id="disponibilidad-titulo">Disponibilidad en tienda</h3>
+            <div id="disponibilidad-icono" class="disponibilidad-icono disponible" aria-hidden="true">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <p id="disponibilidad-estado-principal" class="disponibilidad-estado-principal">Disponible</p>
+            <p id="disponibilidad-estado-secundario" class="disponibilidad-estado-secundario"></p>
+            <p id="disponibilidad-estado-actualizacion" class="disponibilidad-estado-actualizacion"></p>
+        </div>
+
+        <div class="disponibilidad-contenido">
+            <div class="disponibilidad-mensaje">
+                <p>
+                    Ven a ver el producto en persona y te ayudamos a elegirlo con calma en tienda.
+                    <span class="disponibilidad-frase-animada">Te esperamos en Complementos López.</span>
+                </p>
+            </div>
+
+            <div class="disponibilidad-mapa" data-mapa-externo>
+                <div class="mapa-placeholder mapa-placeholder-modal">
+                    <p class="mapa-eyebrow">Contenido externo</p>
+                    <h3>Mapa bajo activación</h3>
+                    <p>Google Maps solo se cargará si decides activarlo. Al hacerlo, Google podrá tratar datos técnicos de navegación conforme a su propia política.</p>
+                    <div class="mapa-acciones">
+                        <button class="btn-mapa-cargar" type="button" data-mapa-cargar>Cargar mapa</button>
+                        <a
+                            class="btn-mapa-externo"
+                            href="https://maps.app.goo.gl/gQDj4W1P7266BY769"
+                            target="_blank"
+                            rel="noopener noreferrer">Abrir en Google Maps</a>
+                    </div>
+                </div>
+                <template>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.0235527162286!2d-4.4882513!3d41.155837399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd40d364d675784f%3A0x12f9c9408aeae79b!2sComplementos%20L%C3%B3pez%20%7C%20Nava%20de%20la%20Asunci%C3%B3n!5e0!3m2!1ses!2ses!4v1775639501755!5m2!1ses!2ses"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </template>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-superior">
+        <div class="footer-brand">
+            <a href="index.html#top" class="footer-logo-link" aria-label="Ir al inicio de Complementos López">
+                <img src="imagen sin fondo 6.png" alt="Logo de Complementos López" class="footer-logo">
+            </a>
+            <p class="footer-brand-texto">Moda, complementos y atención cercana en Nava de la Asunción.</p>
+        </div>
+
+        <div class="footer-columna">
+            <h3>Dirección</h3>
+            <p>Plaza del Sedeño n.º 1</p>
+            <p>Nava de la Asunción, Segovia</p>
+            <p>Teléfono: 689 15 43 55</p>
+        </div>
+
+        <div class="footer-columna">
+            <h3>Navegación</h3>
+            <div class="footer-nav-grid">
+                <a href="index.html#top">Inicio</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="catalogo.html">Productos</a>
+                <a href="index.html#Contacto">Contacto</a>
+                <a href="galeria.html">Galería</a>
+            </div>
+        </div>
+
+        <div class="footer-columna footer-columna-placeholder">
+            <h3>Legal</h3>
+            <a href="aviso-legal.html">Aviso legal</a>
+            <a href="privacidad.html">Privacidad</a>
+            <a href="cookies.html">Cookies</a>
+            <a href="accesibilidad.html">Accesibilidad</a>
+        </div>
+    </div>
+
+    <div class="footer-copy">
+        <p>Copyright © 2026 | Complementos López</p>
+    </div>
+</footer>
+
+<script src="script.js" defer></script>
+<script src="disponibilidad-productos.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const datos = window.ComplementosLopez;
+    const disponibilidadDatos = window.ComplementosLopezDisponibilidad || { actualizacion: '', productos: {} };
+    const catalogo = datos.obtenerCatalogo();
+    let guardado = null;
+
+    try {
+        guardado = JSON.parse(sessionStorage.getItem('productoSeleccionado') || 'null');
+    } catch {
+        guardado = null;
+    }
+
+    const producto = datos.normalizarProducto(guardado || catalogo[0]);
+    let productoActivo = producto;
+
+    const imgPrincipal = document.getElementById('producto-img');
+    const nombre = document.getElementById('producto-nombre');
+    const precio = document.getElementById('producto-precio');
+    const descripcion = document.getElementById('producto-descripcion');
+    const capacidades = document.getElementById('producto-capacidades');
+    const miniaturas = document.getElementById('miniaturas');
+    const etiquetas = document.getElementById('producto-etiquetas');
+    const breadcrumbActual = document.getElementById('breadcrumb-actual');
+    const prevBtn = document.getElementById('producto-prev');
+    const nextBtn = document.getElementById('producto-next');
+    const consultarBtn = document.getElementById('producto-consultar');
+    const favoritoBtn = document.getElementById('producto-favorito');
+    const relacionadosContainer = document.getElementById('relacionados-grid');
+    const disponibilidadBackdrop = document.getElementById('disponibilidad-backdrop');
+    const disponibilidadCerrar = document.getElementById('disponibilidad-cerrar');
+    const disponibilidadIcono = document.getElementById('disponibilidad-icono');
+    const disponibilidadEstadoPrincipal = document.getElementById('disponibilidad-estado-principal');
+    const disponibilidadEstadoSecundario = document.getElementById('disponibilidad-estado-secundario');
+    const disponibilidadEstadoActualizacion = document.getElementById('disponibilidad-estado-actualizacion');
+    let indiceActual = 0;
+
+    function obtenerDisponibilidadProducto(productoId) {
+        const registro = disponibilidadDatos.productos?.[productoId];
+        if (typeof registro?.disponible === 'boolean') {
+            return registro.disponible;
+        }
+
+        return !datos.estaAgotado(productoActivo);
+    }
+
+    function abrirVentanaDisponibilidad() {
+        const registro = disponibilidadDatos.productos?.[productoActivo.id];
+        const disponible = obtenerDisponibilidadProducto(productoActivo.id);
+        const disponibilidadConfirmada = typeof registro?.disponible === 'boolean';
+
+        disponibilidadIcono.classList.toggle('disponible', disponible);
+        disponibilidadIcono.classList.toggle('no-disponible', !disponible);
+        disponibilidadIcono.innerHTML = disponible
+            ? '<i class="fa-solid fa-circle-check"></i>'
+            : '<i class="fa-solid fa-circle-xmark"></i>';
+
+        disponibilidadEstadoPrincipal.textContent = disponible
+            ? 'Disponible en tienda'
+            : 'Ahora mismo no figura disponible en tienda';
+
+        disponibilidadEstadoSecundario.textContent = disponible
+            ? disponibilidadConfirmada
+                ? `Este producto aparece marcado como disponible para visita en tienda física. Si quieres, puedes venir a verlo y confirmar detalles allí mismo.`
+                : `No hay un registro manual de disponibilidad para este producto, pero ahora mismo figura activo en el catálogo web.`
+            : disponibilidadConfirmada
+                ? `Este producto aparece marcado como no disponible en este momento. Aún así, te recomendamos acercarte a la tienda por si hay reposición o alternativas parecidas.`
+                : `No hay un registro manual de disponibilidad para este producto y en la web figura como no disponible en este momento.`;
+
+        disponibilidadEstadoActualizacion.textContent = disponibilidadDatos.actualizacion
+            ? disponibilidadConfirmada
+                ? `Estado revisado en el archivo de disponibilidad: ${disponibilidadDatos.actualizacion}`
+                : `Estado inferido a partir del catálogo web. Última revisión del archivo de disponibilidad: ${disponibilidadDatos.actualizacion}`
+            : disponibilidadConfirmada
+                ? ''
+                : 'Estado inferido a partir del catálogo web.';
+
+        disponibilidadBackdrop.hidden = false;
+        document.body.classList.add('modal-disponibilidad-abierta');
+    }
+
+    function cerrarVentanaDisponibilidad() {
+        disponibilidadBackdrop.hidden = true;
+        document.body.classList.remove('modal-disponibilidad-abierta');
+    }
+
+    function renderEtiquetas() {
+        etiquetas.innerHTML = '';
+
+        if (productoActivo.novedad) {
+            etiquetas.innerHTML += '<span class="producto-badge badge-nuevo">Nuevo</span>';
+        }
+
+        if (datos.tieneOferta(productoActivo)) {
+            etiquetas.innerHTML += '<span class="producto-badge badge-oferta-card">Oferta</span>';
+        }
+
+        if (datos.estaAgotado(productoActivo)) {
+            etiquetas.innerHTML += '<span class="producto-badge badge-agotado">Agotado</span>';
+        }
+    }
+
+    function actualizarImagen(indice) {
+        const imagenes = productoActivo.imagenes.length ? productoActivo.imagenes : [productoActivo.imagen].filter(Boolean);
+        if (!imagenes.length) return;
+
+        indiceActual = (indice + imagenes.length) % imagenes.length;
+        const src = imagenes[indiceActual];
+        imgPrincipal.src = src;
+        imgPrincipal.alt = `${productoActivo.nombre} vista ${indiceActual + 1}`;
+        miniaturas.querySelectorAll('img').forEach((item, itemIndex) => {
+            item.classList.toggle('activa', itemIndex === indiceActual);
+        });
+    }
+
+    function crearProductoParaVariante(variante) {
+        const imagenes = variante.imagenes.length ? variante.imagenes : producto.imagenes;
+
+        return {
+            ...producto,
+            nombre: variante.nombre || producto.nombre,
+            imagen: variante.imagen || imagenes[0] || producto.imagen,
+            imagenes,
+            precioHtml: variante.precioHtml || producto.precioHtml,
+            precioTexto: variante.precioTexto || producto.precioTexto,
+            descripcion: variante.descripcion || producto.descripcion
+        };
+    }
+
+    function actualizarBotonesCapacidad(capacidadId) {
+        capacidades.querySelectorAll('button').forEach(boton => {
+            const activo = boton.dataset.capacidadId === capacidadId;
+            boton.classList.toggle('activo', activo);
+            boton.setAttribute('aria-pressed', activo ? 'true' : 'false');
+        });
+    }
+
+    function renderSelectorCapacidades() {
+        const variantes = producto.variantesCapacidad || [];
+
+        if (variantes.length < 2) {
+            capacidades.hidden = true;
+            return;
+        }
+
+        const inicial = variantes.find(variante => variante.id === producto.capacidadActiva) || variantes[variantes.length - 1];
+        productoActivo = crearProductoParaVariante(inicial);
+        capacidades.hidden = false;
+        capacidades.setAttribute('role', 'group');
+        capacidades.setAttribute('aria-label', 'Elegir capacidad');
+        capacidades.innerHTML = '';
+
+        variantes.forEach(variante => {
+            const boton = document.createElement('button');
+            boton.type = 'button';
+            boton.textContent = variante.etiqueta;
+            boton.dataset.capacidadId = variante.id;
+            boton.setAttribute('aria-pressed', variante.id === inicial.id ? 'true' : 'false');
+            boton.classList.toggle('activo', variante.id === inicial.id);
+
+            boton.addEventListener('click', () => {
+                productoActivo = crearProductoParaVariante(variante);
+                actualizarBotonesCapacidad(variante.id);
+                renderProductoActual();
+            });
+
+            capacidades.appendChild(boton);
+        });
+    }
+
+    function renderMiniaturas() {
+        miniaturas.innerHTML = '';
+        productoActivo.imagenes.forEach((src, index) => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = `${productoActivo.nombre} vista ${index + 1}`;
+
+            img.addEventListener('click', () => {
+                actualizarImagen(index);
+            });
+
+            miniaturas.appendChild(img);
+        });
+    }
+
+    function actualizarSchemaBreadcrumb() {
+        const schema = document.getElementById('producto-breadcrumb-schema');
+        if (!schema) return;
+
+        schema.textContent = JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+                {
+                    '@type': 'ListItem',
+                    position: 1,
+                    name: 'Inicio',
+                    item: 'index.html#top'
+                },
+                {
+                    '@type': 'ListItem',
+                    position: 2,
+                    name: 'Catálogo',
+                    item: 'catalogo.html'
+                },
+                {
+                    '@type': 'ListItem',
+                    position: 3,
+                    name: productoActivo.nombre,
+                    item: 'producto.html'
+                }
+            ]
+        });
+    }
+
+    function renderProductoActual() {
+        document.title = `${productoActivo.nombre} - Complementos López`;
+        nombre.textContent = productoActivo.nombre;
+        breadcrumbActual.textContent = productoActivo.nombre;
+        precio.innerHTML = productoActivo.precioHtml;
+        descripcion.textContent = productoActivo.descripcion;
+        actualizarSchemaBreadcrumb();
+        renderEtiquetas();
+        renderMiniaturas();
+
+        indiceActual = Math.max(0, productoActivo.imagenes.indexOf(productoActivo.imagen));
+        actualizarImagen(indiceActual);
+        prevBtn.hidden = productoActivo.imagenes.length < 2;
+        nextBtn.hidden = productoActivo.imagenes.length < 2;
+    }
+
+    function actualizarBotonFavoritoFicha() {
+        const activo = datos.esFavorito(producto.id);
+        favoritoBtn.classList.toggle('activo', activo);
+        favoritoBtn.setAttribute('aria-pressed', activo ? 'true' : 'false');
+        favoritoBtn.dataset.productoId = producto.id;
+        favoritoBtn.querySelector('span').textContent = activo ? 'Guardado en favoritos' : 'Añadir a favoritos';
+        const icono = favoritoBtn.querySelector('i');
+        icono.classList.toggle('fa-solid', activo);
+        icono.classList.toggle('fa-regular', !activo);
+    }
+
+    renderSelectorCapacidades();
+    renderProductoActual();
+    datos.registrarVistoReciente(producto.id);
+
+    prevBtn.addEventListener('click', () => actualizarImagen(indiceActual - 1));
+    nextBtn.addEventListener('click', () => actualizarImagen(indiceActual + 1));
+    actualizarBotonFavoritoFicha();
+
+    favoritoBtn.addEventListener('click', () => {
+        const anyadido = datos.alternarFavorito(producto.id);
+        if (anyadido) {
+            datos.animarFavoritoHastaHeader(favoritoBtn);
+        }
+        actualizarBotonFavoritoFicha();
+    });
+
+    consultarBtn.addEventListener('click', abrirVentanaDisponibilidad);
+    disponibilidadCerrar.addEventListener('click', cerrarVentanaDisponibilidad);
+
+    disponibilidadBackdrop.addEventListener('click', event => {
+        if (event.target === disponibilidadBackdrop) {
+            cerrarVentanaDisponibilidad();
+        }
+    });
+
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && !disponibilidadBackdrop.hidden) {
+            cerrarVentanaDisponibilidad();
+        }
+    });
+
+    relacionadosContainer.innerHTML = '';
+
+    catalogo
+        .filter(item => item.id !== producto.id && item.categoria === producto.categoria)
+        .slice(0, 4)
+        .forEach(item => {
+            const card = document.createElement('article');
+            card.className = 'producto relacionado-item';
+            card.dataset.productoJson = JSON.stringify(item);
+            card.innerHTML = `
+                <img src="${datos.escaparHtml(item.imagen)}" alt="${datos.escaparHtml(item.nombre)}">
+                <h3>${datos.escaparHtml(item.nombre)}</h3>
+                <p class="precio">${item.precioHtml}</p>
+            `;
+
+            relacionadosContainer.appendChild(card);
+        });
+
+    if (!relacionadosContainer.children.length) {
+        relacionadosContainer.innerHTML = '<p class="estado-vacio">Aún no hay más productos de esta categoría, pero iremos ampliando el catálogo.</p>';
+    } else {
+        datos.decorarProductos(relacionadosContainer);
+        datos.activarTarjetasProducto('#relacionados-grid .producto');
+    }
+
+});
+</script>
+
+</body>
+</html>

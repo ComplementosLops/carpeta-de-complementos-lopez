@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complementos López - Complementos y reparación de calzado en Nava de la Asunción</title>
+    <meta name="description" content="Complementos López en Nava de la Asunción: complementos, reparación de calzado, catálogo, ofertas, galería, horarios y datos de contacto de la tienda.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Complementos López",
+      "image": "imagen sin fondo 6.png",
+      "telephone": "+34689154355",
+      "email": "reparacionycomplementoslopez@hotmail.es",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plaza del Sedeño n.º 1",
+        "addressLocality": "Nava de la Asunción",
+        "addressRegion": "Segovia"
+      },
+      "openingHours": [
+        "Mo-Fr 10:00-13:30",
+        "Mo-Fr 17:00-20:00",
+        "Sa 10:00-14:00"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/complementos_lopez?igsh=ODFwa2NobmN1YTds",
+        "https://www.facebook.com/reparaciondecalzadoycomplemetoslopez?locale=es_ES"
+      ],
+      "hasMap": "https://maps.app.goo.gl/gQDj4W1P7266BY769"
+    }
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div id="top" aria-hidden="true"></div>
+<a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+<!-----------------------------------------------NAVEGACION--------------------------------------------------->
+    <header class="header">
+        <div class="header-brand">
+            <a href="#top" class="brand-link" aria-label="Ir al inicio">
+                <img src="imagen sin fondo 6.png" alt="Logo de Complementos López" class="brand-logo">
+                <h1>Complementos López</h1>
+            </a>
+            <div class="redes redes-brand">
+              <a href="https://www.instagram.com/complementos_lopez?igsh=ODFwa2NobmN1YTds" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.facebook.com/reparaciondecalzadoycomplemetoslopez?locale=es_ES" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#Contacto" aria-label="Ir a contacto"><i class="fa-solid fa-location-dot"></i></a>
+            </div>
+        </div>
+        <a href="#Contacto" class="contador-link" aria-label="Ir a la sección de contacto y horario">
+            <p class="contador contador-horario"></p>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="header-panel" aria-label="Abrir menú principal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div id="header-panel" class="header-panel">
+            <nav class="nav">
+                <ul>
+                    <li><a href="#top">Inicio</a></li>
+                    <li><a href="catalogo.html">Productos</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li><a href="#Contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-tools">
+                <div class="buscador-header" role="search">
+                    <button class="buscador-toggle" type="button" aria-label="Abrir buscador">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div class="buscador-campo">
+                        <input type="search" class="buscador-input" placeholder="Buscar producto" aria-label="Buscar producto">
+                        <button class="buscador-cerrar" type="button" aria-label="Cerrar buscador">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="buscador-resultados" hidden></div>
+                </div>
+            </div>
+        </div>
+        <div class="favoritos-menu">
+            <button class="favoritos-toggle" type="button" aria-label="Abrir favoritos">
+                <i class="fa-solid fa-heart favoritos-icono"></i>
+                <span class="favoritos-contador">0</span>
+            </button>
+            <div class="favoritos-panel" hidden>
+                <p class="favoritos-vacio">Todavía no has marcado productos favoritos.</p>
+                <div class="favoritos-lista"></div>
+            </div>
+        </div>
+    </header>
+
+<main id="contenido-principal">
+<!-----------------------------------------------CENTRO DEL INICIO-------------------------------------------->
+    <section id="Inicio" class="hero">
+        <a href="#Contacto" class="contador-hero-link" aria-label="Ir a la sección de contacto y horario">
+            <p class="contador contador-horario contador-hero"></p>
+        </a>
+        <div class="hero-content">
+            <h2>Tu estilo,<br><em>tu esencia</em></h2>
+            <p class="subtitulo">Bolsos artesanales, ropa seleccionada, cintos y complementos para cada ocasión</p>
+            <div class="hero-buttons">
+                <a href="catalogo.html" class="btn">Ver productos</a>
+                <a href="#Contacto" class="btn btn-outline">Visítanos</a>
+            </div>
+        </div>
+    </section>
+
+<!---------------------------------------------------FILTROS--------------------------------------------------->
+    <section id="Productos" class="productos">
+        <h2 class="titulo-seccion">Productos</h2>
+        <p class="seccion-intro">
+            Aquí mostramos una selección inicial de productos destacados. Para ver el catálogo completo, entra en la página de productos.
+        </p>
+
+        <div class="filtros">
+            <button class="filtro-btn active" type="button">Todos</button>
+            <button class="filtro-btn" type="button">Bolsos</button>
+            <button class="filtro-btn" type="button">Ropa</button>
+            <button class="filtro-btn" type="button">Tazas</button>
+            <button class="filtro-btn" type="button">Mochila</button>
+            <button class="filtro-btn" type="button">Carteras</button>
+            <button class="filtro-btn" type="button">Botellas</button>
+            <button class="filtro-btn" type="button">Otros</button>
+        </div>
+
+<!---------------------------------------------------PRODUCTOS------------------------------------------------->
+
+<!--Mochila antirrobo Muse-->
+
+        <div class="grid-productos">
+            <article
+                class="producto"
+                data-producto-id="mochila-muse"
+                data-categoria="mochila"
+                data-img="Productos/Mochila antirrobo Muse.jpg.webp"
+                data-img-hover="Productos/Mochila antirrobo muse 2.jpg.webp"
+                data-img2="Productos/Mochila antirrobo muse 2.jpg.webp"
+                data-img3="Productos/MOCHILA ANTIRROBO MUSE 3.jpg.webp"
+                data-descripcion="Mochila antirrobo de estilo urbano, cómoda para el día a día y con un acabado elegante."
+                data-novedad="true">
+                <img src="Productos/Mochila antirrobo Muse.jpg.webp" alt="Mochila antirrobo Muse">
+                <h3>Mochila antirrobo Muse</h3>
+                <p class="precio">68,95€</p>
+            </article>
+
+<!--Mochila antirrobo Amphora-->
+
+            <article
+                class="producto"
+                data-producto-id="mochila-amphora"
+                data-categoria="mochila"
+                data-img="Productos/Mochila antirobo Amphora.jpg.webp"
+                data-descripcion="Mochila funcional con diseño actual y espacio interior pensado para acompañarte a diario."
+                data-novedad="false">
+                <img src="Productos/Mochila antirobo Amphora.jpg.webp" alt="Mochila antirrobo Amphora">
+                <h3>Mochila antirrobo Amphora</h3>
+                <p class="precio">68,95€</p>
+            </article>
+
+<!--Botella VIVID VIOLET 750 ml-->
+
+            <article
+                class="producto"
+                data-producto-id="botella-vivid-violet"
+                data-categoria="botellas"
+                data-img="Productos/Botella VIVID VIOLET.jpg.webp"
+                data-img-hover="Productos/Botella VIVID VIOLET 750 ml 2.jpg.webp"
+                data-img2="Productos/Botella VIVID VIOLET 750 ml 2.jpg.webp"
+                data-img3="Productos/Botella VIVID VIOLET 750 ml 3.jpg.webp"
+                data-descripcion="Botella reutilizable de 750 ml, ligera y práctica para llevar agua con estilo."
+                data-novedad="false">
+                <img src="Productos/Botella VIVID VIOLET.jpg.webp" alt="Botella Vivid Violet de 750 mililitros">
+                <h3>Botella VIVID VIOLET 750 ml</h3>
+                <p class="precio">29,95€</p>
+            </article>
+
+<!--Cinturón de piel hebilla plateada cowboy cuero-->
+
+            <article
+                class="producto"
+                data-producto-id="cinturon-cowboy"
+                data-categoria="otros"
+                data-img="Productos/CINTURON DE PIEL HEBILLA PLATEADA COWBOY CUERO.jpg"
+                data-descripcion="Cinturón de piel con hebilla plateada, una pieza versátil para elevar cualquier look."
+                data-novedad="false">
+                <img src="Productos/CINTURON DE PIEL HEBILLA PLATEADA COWBOY CUERO.jpg" alt="Cinturón de piel cowboy con hebilla plateada">
+                <h3>Cinturón de piel hebilla plateada cowboy cuero</h3>
+                <p class="precio">
+                    <span class="precio-antiguo">45,00€</span>
+                    <span class="precio-nuevo">36,29€</span>
+                </p>
+            </article>
+
+<!--BOLSO DE ASA CORTA EIKON-->
+
+            <article
+                class="producto"
+                data-producto-id="bolso-eikon"
+                data-categoria="bolsos"
+                data-img="Productos/BOLSO DE ASA CORTA EIKON 1.jpg.webp"
+                data-img-hover="Productos/BOLSO DE ASA CORTA EIKON 2.jpg.webp"
+                data-img2="Productos/BOLSO DE ASA CORTA EIKON 2.jpg.webp"
+                data-img3="Productos/BOLSO DE ASA CORTA EIKON 3.jpg.webp"
+                data-descripcion="Bolso de asa corta con un formato elegante y cómodo para elevar cualquier look diario."
+                data-novedad="false">
+                <img src="Productos/BOLSO DE ASA CORTA EIKON 1.jpg.webp" alt="Bolso de asa corta eikon">
+                <h3>BOLSO DE ASA CORTA EIKON</h3>
+                <p class="precio">---</p>
+            </article>
+
+<!--BOLSO HOBO AMPHORA-->
+
+            <article
+                class="producto"
+                data-producto-id="bolso-hobo"
+                data-categoria="bolsos"
+                data-img="Productos/BOLSO HOBO AMPHORA 1.jpg.webp"
+                data-img-hover="Productos/BOLSO HOBO AMPHORA 2.jpg.webp"
+                data-img2="Productos/BOLSO HOBO AMPHORA 2.jpg.webp"
+                data-img3="Productos/BOLSO HOBO AMPHORA 3.jpg.webp"
+                data-descripcion="Bolso hobo de estilo actual, amplio y práctico para el día a día."
+                data-novedad="false">
+                <img src="Productos/BOLSO HOBO AMPHORA 1.jpg.webp" alt="Bolso hobo Amphora">
+                <h3>BOLSO HOBO AMPHORA</h3>
+                <p class="precio">58,95€</p>
+            </article>
+
+<!--BILLETERO PEQUEÑO OLYMPIA-->
+            
+            <article
+                class="producto"
+                data-producto-id="cartera-olympia"
+                data-categoria="carteras"
+                data-img="Productos/BILLETERO PEQUENO OLYMPIA 1.jpg.webp"
+                data-img-hover="Productos/BILLETERO PEQUENO OLYMPIA 2.jpg.webp"
+                data-img2="Productos/BILLETERO PEQUENO OLYMPIA 2.jpg.webp"
+                data-img3="Productos/BILLETERO PEQUENO OLYMPIA 3.jpg.webp"
+                data-descripcion="Cartera compacta y práctica, perfecta para llevar lo esencial con orden."
+                data-novedad="false">
+                <img src="Productos/BILLETERO PEQUENO OLYMPIA 1.jpg.webp" alt="Cartera pequeña Olympia">
+                <h3>CARTERA PEQUEÑA OLYMPIA</h3>
+                <p class="precio">22,95€</p>
+            </article>
+
+<!--MOCHILA CON BOLSILLO FRONTAL MUSE-->
+            
+            <article
+                class="producto"
+                data-producto-id="mochila-frontal-muse"
+                data-categoria="mochila"
+                data-img="Productos/MOCHILA CON BOLSILLO FRONTAL MUSE 1.jpg.webp"
+                data-img-hover="Productos/MOCHILA CON BOLSILLO FRONTAL MUSE 2.jpg.webp"
+                data-img2="Productos/MOCHILA CON BOLSILLO FRONTAL MUSE 2.jpg.webp"
+                data-img3="Productos/MOCHILA CON BOLSILLO FRONTAL MUSE 3.jpg.webp"
+                data-descripcion="Mochila versátil con bolsillo frontal y formato cómodo para uso diario."
+                data-novedad="false">
+                <img src="Productos/MOCHILA CON BOLSILLO FRONTAL MUSE 1.jpg.webp" alt="Mochila con bolsillo frontal Muse">
+                <h3>MOCHILA CON BOLSILLO FRONTAL MUSE</h3>
+                <p class="precio">68,95€</p>
+            </article>
+
+
+        </div>
+
+        <div class="productos-cta">
+            <a href="catalogo.html" class="btn btn-outline-dark">Ver catálogo completo</a>
+        </div>
+    </section>
+
+<!---------------------------------------------------CONTACTO----------------------------------------------------->
+<section id="Contacto" class="contacto">
+    <h2 class="titulo-seccion">Contacto</h2>
+
+    <div class="contenedor-contacto">
+
+        <div class="info-contacto">
+            <h3>Datos de contacto</h3>
+            <p><i class="fa-solid fa-phone"></i><strong>Teléfono:</strong> 689 15 43 55</p>
+            <p><i class="fa-solid fa-envelope"></i><strong>Email:</strong> reparacionycomplementoslopez@hotmail.es</p>
+            <p><i class="fa-solid fa-location-dot"></i><strong>Dirección:</strong> Plaza del Sedeño n.º 1</p>
+            <a
+                class="contacto-mapa-link"
+                href="https://www.google.com/maps/place/Complementos+L%C3%B3pez+%7C+Nava+de+la+Asunci%C3%B3n/@41.1558374,-4.4882513,17z/"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Abrir ubicacion en Google Maps</span>
+            </a>
+
+            <h3>Horario</h3>
+            <table class="tabla-horario">
+                <tr><th>Dia</th><th>Horario</th></tr>
+                <tr><td>Lunes</td><td>10:00-13:30 / 17:00-20:00</td></tr>
+                <tr><td>Martes</td><td>10:00-13:30 / 17:00-20:00</td></tr>
+                <tr><td>Miercoles</td><td>10:00-13:30 / 17:00-20:00</td></tr>
+                <tr><td>Jueves</td><td>10:00-13:30 / 17:00-20:00</td></tr>
+                <tr><td>Viernes</td><td>10:00-13:30 / 17:00-20:00</td></tr>
+                <tr><td>Sabado</td><td>10:00-14:00</td></tr>
+                <tr><td>Domingo</td><td>Cerrado</td></tr>
+            </table>
+        </div>
+
+<!----------------------------------------------------MAPA--------------------------------------------------------->
+
+        <div class="mapa" data-mapa-externo>
+            <div class="mapa-placeholder">
+                <p class="mapa-eyebrow">Contenido externo</p>
+                <h3>Mapa protegido por privacidad</h3>
+                <p>El mapa de Google Maps permanece desactivado hasta que decidas cargarlo. Si lo activas, Google podrá tratar tu dirección IP y otros datos técnicos conforme a sus propias políticas.</p>
+                <div class="mapa-acciones">
+                    <button class="btn-mapa-cargar" type="button" data-mapa-cargar>Cargar mapa</button>
+                    <a
+                        class="btn-mapa-externo"
+                        href="https://maps.app.goo.gl/gQDj4W1P7266BY769"
+                        target="_blank"
+                        rel="noopener noreferrer">Abrir en Google Maps</a>
+                </div>
+            </div>
+            <template>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.0235527162286!2d-4.4882513!3d41.155837399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd40d364d675784f%3A0x12f9c9408aeae79b!2sComplementos%20L%C3%B3pez%20%7C%20Nava%20de%20la%20Asunci%C3%B3n!5e0!3m2!1ses!2ses!4v1775639501755!5m2!1ses!2ses"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </template>
+        </div>
+
+    </div>
+</section>
+
+    </main>
+<footer class="footer">
+    <div class="footer-superior">
+        <div class="footer-brand">
+            <a href="#top" class="footer-logo-link" aria-label="Ir al inicio de Complementos López">
+                <img src="imagen sin fondo 6.png" alt="Logo de Complementos López" class="footer-logo">
+            </a>
+            <p class="footer-brand-texto">Moda, complementos y atención cercana en Nava de la Asunción.</p>
+        </div>
+
+        <div class="footer-columna">
+            <h3>Dirección</h3>
+            <p>Plaza del Sedeño n.º 1</p>
+            <p>Nava de la Asunción, Segovia</p>
+            <p>Teléfono: 689 15 43 55</p>
+        </div>
+
+        <div class="footer-columna">
+            <h3>Navegación</h3>
+            <div class="footer-nav-grid">
+                <a href="#top">Inicio</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="catalogo.html">Productos</a>
+                <a href="index.html#Contacto">Contacto</a>
+                <a href="galeria.html">Galería</a>
+            </div>
+        </div>
+
+        <div class="footer-columna footer-columna-placeholder">
+            <h3>Legal</h3>
+            <a href="aviso-legal.html">Aviso legal</a>
+            <a href="privacidad.html">Privacidad</a>
+            <a href="cookies.html">Cookies</a>
+            <a href="accesibilidad.html">Accesibilidad</a>
+        </div>
+    </div>
+
+    <div class="footer-copy">
+        <p>Copyright © 2026 | Complementos López</p>
+    </div>
+</footer>
+</body>
+</html>

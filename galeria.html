@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Complementos López</title>
+    <meta name="description" content="Galería de Complementos López con imágenes de la tienda, maletas, bolsos, carteras, paraguas y otros complementos disponibles para ver en tienda.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "index.html#top"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Galería",
+          "item": "galeria.html"
+        }
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+<header class="header">
+    <div class="header-brand">
+        <a href="index.html#top" class="brand-link" aria-label="Ir al inicio">
+            <img src="imagen sin fondo 6.png" alt="Logo de Complementos López" class="brand-logo">
+            <h1>Complementos López</h1>
+        </a>
+        <div class="redes redes-brand">
+            <a href="https://www.instagram.com/complementos_lopez?igsh=ODFwa2NobmN1YTds" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/reparaciondecalzadoycomplemetoslopez?locale=es_ES" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="index.html#Contacto" aria-label="Ir a contacto"><i class="fa-solid fa-location-dot"></i></a>
+        </div>
+    </div>
+    <a href="index.html#Contacto" class="contador-link" aria-label="Ir a la sección de contacto y horario">
+        <p class="contador contador-horario"></p>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="header-panel" aria-label="Abrir menú principal">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div id="header-panel" class="header-panel">
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html#top">Inicio</a></li>
+                <li><a href="catalogo.html">Productos</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="index.html#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-tools">
+            <div class="buscador-header" role="search">
+                <button class="buscador-toggle" type="button" aria-label="Abrir buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="buscador-campo">
+                    <input type="search" class="buscador-input" placeholder="Buscar producto" aria-label="Buscar producto">
+                    <button class="buscador-cerrar" type="button" aria-label="Cerrar buscador">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="buscador-resultados" hidden></div>
+            </div>
+        </div>
+    </div>
+    <div class="favoritos-menu">
+        <button class="favoritos-toggle" type="button" aria-label="Abrir favoritos">
+            <i class="fa-solid fa-heart favoritos-icono"></i>
+            <span class="favoritos-contador">0</span>
+        </button>
+        <div class="favoritos-panel" hidden>
+            <p class="favoritos-vacio">Todavía no has marcado productos favoritos.</p>
+            <div class="favoritos-lista"></div>
+        </div>
+    </div>
+</header>
+
+<main id="contenido-principal">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="index.html#top">Inicio</a>
+    <span>/</span>
+    <span>Galería</span>
+</nav>
+
+<section class="galeria">
+    <h2 class="titulo-seccion">Galería</h2>
+    <p class="seccion-intro">
+        Un grid tipo Instagram para mostrar escaparates, productos, rincones y momentos de la tienda.
+    </p>
+
+    <div id="galeria-grid" class="galeria-feed"></div>
+</section>
+
+<div id="lightbox" class="lightbox" hidden>
+    <button id="lightbox-cerrar" class="lightbox-cerrar" type="button" aria-label="Cerrar galería">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <button id="lightbox-prev" class="lightbox-nav lightbox-prev" type="button" aria-label="Imagen anterior">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <figure class="lightbox-figura">
+        <img id="lightbox-img" src="" alt="">
+        <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <button id="lightbox-next" class="lightbox-nav lightbox-next" type="button" aria-label="Imagen siguiente">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-superior">
+        <div class="footer-brand">
+            <a href="index.html#top" class="footer-logo-link" aria-label="Ir al inicio de Complementos López">
+                <img src="imagen sin fondo 6.png" alt="Logo de Complementos López" class="footer-logo">
+            </a>
+            <p class="footer-brand-texto">Moda, complementos y atención cercana en Nava de la Asunción.</p>
+        </div>
+
+        <div class="footer-columna">
+            <h3>Dirección</h3>
+            <p>Plaza del Sedeño n.º 1</p>
+            <p>Nava de la Asunción, Segovia</p>
+            <p>Teléfono: 689 15 43 55</p>
+        </div>
+
+        <div class="footer-columna">
+            <h3>Navegación</h3>
+            <div class="footer-nav-grid">
+                <a href="index.html#top">Inicio</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="catalogo.html">Productos</a>
+                <a href="index.html#Contacto">Contacto</a>
+                <a href="galeria.html">Galería</a>
+            </div>
+        </div>
+
+        <div class="footer-columna footer-columna-placeholder">
+            <h3>Legal</h3>
+            <a href="aviso-legal.html">Aviso legal</a>
+            <a href="privacidad.html">Privacidad</a>
+            <a href="cookies.html">Cookies</a>
+            <a href="accesibilidad.html">Accesibilidad</a>
+        </div>
+    </div>
+
+    <div class="footer-copy">
+        <p>Copyright © 2026 | Complementos López</p>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const imagenes = [
+        { src: 'PANORAMICA de la tienda entera.jpg', texto: 'Vista general de la tienda', grande: true },
+        { src: 'PANO_20260111_191456.jpg', texto: 'Panorámica del interior', ancha: true },
+        { src: 'Galeria/galeria1.jpg', texto: 'Complementos', vertical: true },
+        { src: 'Galeria/galeria2.jpg', texto: 'Maletas' },
+        { src: 'Galeria/galeria3.jpg', texto: 'Spray' },
+        { src: 'Galeria/galeria4.jpg', texto: 'Spray' },
+        { src: 'Galeria/galeria5.jpg', texto: 'Paraguas', vertical: true },
+        { src: 'Galeria/galeria6.jpg', texto: 'Spray' },
+        { src: 'Galeria/galeria7.jpg', texto: 'Spray' },
+        { src: 'Galeria/galeria8.jpg', texto: 'Carteras' },
+        { src: 'Galeria/galeria9.jpg', texto: 'Spray', vertical: true },
+        { src: 'Galeria/galeria10.jpg', texto: 'Spray' },
+        { src: 'Galeria/galeria11.jpg', texto: 'Spray' },
+        { src: 'Galeria/galeria12.jpg', texto: 'Paraguas', vertical: true },
+        { src: 'Galeria/galeria13.jpg', texto: 'Complementos' },
+        { src: 'Galeria/galeria14.jpg', texto: 'Spray' },
+        { src: 'Galeria/galeria15.jpg', texto: 'Paraguas' },
+        { src: 'Galeria/galeria16.jpg', texto: 'Carteras', vertical: true },
+        { src: 'Galeria/galeria17.jpg', texto: 'Carteras' },
+        { src: 'Galeria/galeria18.jpg', texto: 'Spray' },
+        { src: 'Galeria/galeria19.jpg', texto: 'Carteras', vertical: true },
+        { src: 'Galeria/galeria20.jpg', texto: 'Maleta' },
+        { src: 'Galeria/galeria21.jpg', texto: 'Maletas', vertical: true }
+    ];
+
+    const grid = document.getElementById('galeria-grid');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const prevBtn = document.getElementById('lightbox-prev');
+    const nextBtn = document.getElementById('lightbox-next');
+    const cerrarBtn = document.getElementById('lightbox-cerrar');
+    let indiceActual = 0;
+
+    function renderGaleria() {
+        grid.innerHTML = '';
+
+        imagenes.forEach((imagen, index) => {
+            const card = document.createElement('button');
+            card.type = 'button';
+            card.className = `galeria-post${imagen.grande ? ' galeria-post-grande' : ''}${imagen.ancha ? ' galeria-post-ancha' : ''}${imagen.vertical ? ' galeria-post-vertical' : ''}`;
+            card.innerHTML = `
+                <img src="${imagen.src}" alt="${imagen.texto}">
+                <span class="galeria-post-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                    <span>${imagen.texto}</span>
+                </span>
+            `;
+
+            const vistaPrevia = card.querySelector('img');
+            const marcarHorizontal = () => {
+                if (!vistaPrevia || imagen.vertical || imagen.grande) return;
+                if (vistaPrevia.naturalWidth > vistaPrevia.naturalHeight) {
+                    card.classList.add('galeria-post-horizontal');
+                }
+            };
+
+            vistaPrevia?.addEventListener('load', marcarHorizontal);
+            if (vistaPrevia?.complete) {
+                marcarHorizontal();
+            }
+
+            card.addEventListener('click', () => {
+                indiceActual = index;
+                abrirLightbox();
+            });
+
+            grid.appendChild(card);
+        });
+    }
+
+    function actualizarLightbox() {
+        const imagen = imagenes[indiceActual];
+        lightboxImg.src = imagen.src;
+        lightboxImg.alt = imagen.texto;
+        lightboxCaption.textContent = imagen.texto;
+    }
+
+    function abrirLightbox() {
+        actualizarLightbox();
+        lightbox.hidden = false;
+        document.body.classList.add('lightbox-abierto');
+    }
+
+    function cerrarLightbox() {
+        lightbox.hidden = true;
+        document.body.classList.remove('lightbox-abierto');
+    }
+
+    function mover(delta) {
+        indiceActual = (indiceActual + delta + imagenes.length) % imagenes.length;
+        actualizarLightbox();
+    }
+
+    prevBtn.addEventListener('click', () => mover(-1));
+    nextBtn.addEventListener('click', () => mover(1));
+    cerrarBtn.addEventListener('click', cerrarLightbox);
+    lightbox.addEventListener('click', event => {
+        if (event.target === lightbox) {
+            cerrarLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', event => {
+        if (lightbox.hidden) return;
+        if (event.key === 'Escape') cerrarLightbox();
+        if (event.key === 'ArrowLeft') mover(-1);
+        if (event.key === 'ArrowRight') mover(1);
+    });
+
+    renderGaleria();
+});
+</script>
+
+</body>
+</html>

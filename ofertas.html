@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas - Complementos López</title>
+    <meta name="description" content="Ofertas y promociones visibles de Complementos López, con productos destacados y precios orientativos para consultar antes de visitar la tienda.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "index.html#top"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Ofertas",
+          "item": "ofertas.html"
+        }
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+<header class="header">
+    <div class="header-brand">
+        <a href="index.html#top" class="brand-link" aria-label="Ir al inicio">
+            <img src="imagen sin fondo 6.png" alt="Logo de Complementos López" class="brand-logo">
+            <h1>Complementos López</h1>
+        </a>
+        <div class="redes redes-brand">
+            <a href="https://www.instagram.com/complementos_lopez?igsh=ODFwa2NobmN1YTds" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/reparaciondecalzadoycomplemetoslopez?locale=es_ES" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="index.html#Contacto" aria-label="Ir a contacto"><i class="fa-solid fa-location-dot"></i></a>
+        </div>
+    </div>
+    <a href="index.html#Contacto" class="contador-link" aria-label="Ir a la sección de contacto y horario">
+        <p class="contador contador-horario"></p>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="header-panel" aria-label="Abrir menú principal">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div id="header-panel" class="header-panel">
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html#top">Inicio</a></li>
+                <li><a href="catalogo.html">Productos</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="index.html#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-tools">
+            <div class="buscador-header" role="search">
+                <button class="buscador-toggle" type="button" aria-label="Abrir buscador">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="buscador-campo">
+                    <input type="search" class="buscador-input" placeholder="Buscar producto" aria-label="Buscar producto">
+                    <button class="buscador-cerrar" type="button" aria-label="Cerrar buscador">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="buscador-resultados" hidden></div>
+            </div>
+        </div>
+    </div>
+    <div class="favoritos-menu">
+        <button class="favoritos-toggle" type="button" aria-label="Abrir favoritos">
+            <i class="fa-solid fa-heart favoritos-icono"></i>
+            <span class="favoritos-contador">0</span>
+        </button>
+        <div class="favoritos-panel" hidden>
+            <p class="favoritos-vacio">Todavía no has marcado productos favoritos.</p>
+            <div class="favoritos-lista"></div>
+        </div>
+    </div>
+</header>
+
+<main id="contenido-principal">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="index.html#top">Inicio</a>
+    <span>/</span>
+    <span>Ofertas</span>
+</nav>
+
+<section class="ofertas">
+    <h2 class="titulo-seccion">Ofertas</h2>
+    <p class="seccion-intro">
+        Productos que actualmente están en oferta.
+    </p>
+
+    <div id="ofertas-grid" class="grid-productos"></div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-superior">
+        <div class="footer-brand">
+            <a href="index.html#top" class="footer-logo-link" aria-label="Ir al inicio de Complementos López">
+                <img src="imagen sin fondo 6.png" alt="Logo de Complementos López" class="footer-logo">
+            </a>
+            <p class="footer-brand-texto">Moda, complementos y atención cercana en Nava de la Asunción.</p>
+        </div>
+
+        <div class="footer-columna">
+            <h3>Dirección</h3>
+            <p>Plaza del Sedeño n.º 1</p>
+            <p>Nava de la Asunción, Segovia</p>
+            <p>Teléfono: 689 15 43 55</p>
+        </div>
+
+        <div class="footer-columna">
+            <h3>Navegación</h3>
+            <div class="footer-nav-grid">
+                <a href="index.html#top">Inicio</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="catalogo.html">Productos</a>
+                <a href="index.html#Contacto">Contacto</a>
+                <a href="galeria.html">Galería</a>
+            </div>
+        </div>
+
+        <div class="footer-columna footer-columna-placeholder">
+            <h3>Legal</h3>
+            <a href="aviso-legal.html">Aviso legal</a>
+            <a href="privacidad.html">Privacidad</a>
+            <a href="cookies.html">Cookies</a>
+            <a href="accesibilidad.html">Accesibilidad</a>
+        </div>
+    </div>
+
+    <div class="footer-copy">
+        <p>Copyright © 2026 | Complementos López</p>
+    </div>
+</footer>
+
+<script src="script.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const datos = window.ComplementosLopez;
+  const catalogo = datos.obtenerCatalogo();
+  const ofertas = catalogo.filter(producto => producto.precioAntiguo && producto.precioNuevo);
+  const contenedor = document.getElementById('ofertas-grid');
+
+  contenedor.innerHTML = '';
+
+  ofertas.forEach(producto => {
+    const card = document.createElement('article');
+    card.className = 'producto';
+    card.dataset.productoId = producto.id;
+    card.dataset.categoria = producto.categoria;
+    card.dataset.productoJson = JSON.stringify(producto);
+    card.innerHTML = `
+      <img src="${datos.escaparHtml(producto.imagen)}" alt="${datos.escaparHtml(producto.nombre)}">
+      <h3>${datos.escaparHtml(producto.nombre)}</h3>
+      <p class="precio">${producto.precioHtml}</p>
+    `;
+
+    contenedor.appendChild(card);
+  });
+
+  if (!ofertas.length) {
+    contenedor.innerHTML = '<p class="estado-vacio">Todavía no hay ofertas activas. Cuando añadas una rebaja en Inicio, aparecerá aquí automáticamente.</p>';
+  } else {
+    datos.decorarProductos(contenedor);
+    datos.activarTarjetasProducto('#ofertas-grid .producto');
+  }
+});
+</script>
+
+</body>
+</html>
