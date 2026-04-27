@@ -17,7 +17,13 @@ const RUTA_IMAGEN_ALIASES = {
   'Productos/MONEDERO PEQUEÑO RFID MUSE 3.jpg.webp': 'Productos/MONEDERO PEQUENO RFID MUSE 3.jpg.webp',
   'Productos/MOCHILA PEQUEÑA OLYMPIA 1.jpg.webp': 'Productos/MOCHILA PEQUENA OLYMPIA 1.jpg.webp',
   'Productos/MOCHILA PEQUEÑA OLYMPIA 2.jpg.webp': 'Productos/MOCHILA PEQUENA OLYMPIA 2.jpg.webp',
-  'Productos/MOCHILA PEQUEÑA OLYMPIA 3.jpg.webp': 'Productos/MOCHILA PEQUENA OLYMPIA 3.jpg.webp'
+  'Productos/MOCHILA PEQUEÑA OLYMPIA 3.jpg.webp': 'Productos/MOCHILA PEQUENA OLYMPIA 3.jpg.webp',
+  'Productos/RIÑONERA AURALIS 1.jpg.webp': 'Productos/RINONERA AURALIS 1.jpg.webp',
+  'Productos/RIÑONERA AURALIS 2.jpg.webp': 'Productos/RINONERA AURALIS 2.jpg.webp',
+  'Productos/RIÑONERA AURALIS 3.jpg.webp': 'Productos/RINONERA AURALIS 3.jpg.webp',
+  'Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  1.jpg': 'Productos/CARTERA BILLETERA CON CIERRE BOTON Y LLAVERO PIEL NEGRA 1.jpg',
+  'Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  2.jpg': 'Productos/CARTERA BILLETERA CON CIERRE BOTON Y LLAVERO PIEL NEGRA 2.jpg',
+  'Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  3.jpg': 'Productos/CARTERA BILLETERA CON CIERRE BOTON Y LLAVERO PIEL NEGRA 3.jpg'
 };
 
 const catalogoBase = [
@@ -526,11 +532,11 @@ const catalogoBase = [
   {
     id: 'rinonera-auralis',
     nombre: 'RIÑONERA AURALIS',
-    imagen: 'Productos/RIÑONERA AURALIS 1.jpg.webp',
+    imagen: 'Productos/RINONERA AURALIS 1.jpg.webp',
     imagenes: [
-      'Productos/RIÑONERA AURALIS 1.jpg.webp',
-      'Productos/RIÑONERA AURALIS 2.jpg.webp',
-      'Productos/RIÑONERA AURALIS 3.jpg.webp'
+      'Productos/RINONERA AURALIS 1.jpg.webp',
+      'Productos/RINONERA AURALIS 2.jpg.webp',
+      'Productos/RINONERA AURALIS 3.jpg.webp'
     ],
     precioHtml: '44,95€',
     precioTexto: '44,95€',
@@ -766,11 +772,11 @@ const catalogoBase = [
   {
     id: 'cartera-billetera-cierre-boton-llavero-piel-negra',
     nombre: 'CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA',
-    imagen: 'Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  1.jpg',
+    imagen: 'Productos/CARTERA BILLETERA CON CIERRE BOTON Y LLAVERO PIEL NEGRA 1.jpg',
     imagenes: [
-      'Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  1.jpg',
-      'Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  2.jpg',
-      'Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  3.jpg'
+      'Productos/CARTERA BILLETERA CON CIERRE BOTON Y LLAVERO PIEL NEGRA 1.jpg',
+      'Productos/CARTERA BILLETERA CON CIERRE BOTON Y LLAVERO PIEL NEGRA 2.jpg',
+      'Productos/CARTERA BILLETERA CON CIERRE BOTON Y LLAVERO PIEL NEGRA 3.jpg'
     ],
     precioHtml: '26,98€',
     precioTexto: '26,98€',
@@ -851,6 +857,66 @@ const catalogoBase = [
     precioTexto: '28,99€',
     categoria: 'mochila',
     descripcion: 'Mochila infantil Cloud Sky ligera y cómoda para el día a día.',
+    novedad: false
+  },
+  {
+    id: 'maleta-xs-future-plus-turquesa',
+    nombre: 'MALETA XS FUTURE PLUS TURQUESA 30x42x20 cm',
+    imagen: 'Productos/MALETA XS FUTURE PLUS TURQUESA 30x42x20 cm 1.jpg',
+    imagenes: [
+      'Productos/MALETA XS FUTURE PLUS TURQUESA 30x42x20 cm 1.jpg',
+      'Productos/MALETA XS FUTURE PLUS TURQUESA 30x42x20 cm 2.jpg',
+      'Productos/MALETA XS FUTURE PLUS TURQUESA 30x42x20 cm 3.jpg'
+    ],
+    precioHtml: '57,99€',
+    precioTexto: '57,99€',
+    categoria: 'otros',
+    descripcion: 'Maleta XS Future Plus turquesa de 30x42x20 cm, práctica para viajes cortos y escapadas.',
+    novedad: false
+  },
+  {
+    id: 'maleta-grande-paradise-xp-rosa',
+    nombre: 'MALETA GRANDE PARADISE XP ROSA 54x77x29 cm',
+    imagen: 'Productos/MALETA GRANDE PARADISE XP ROSA 54x77x29 cm 1.jpg',
+    imagenes: [
+      'Productos/MALETA GRANDE PARADISE XP ROSA 54x77x29 cm 1.jpg',
+      'Productos/MALETA GRANDE PARADISE XP ROSA 54x77x29 cm 2.jpg',
+      'Productos/MALETA GRANDE PARADISE XP ROSA 54x77x29 cm 3.jpg'
+    ],
+    precioHtml: '99,99€',
+    precioTexto: '99,99€',
+    categoria: 'otros',
+    descripcion: 'Maleta grande Paradise XP rosa de 54x77x29 cm, amplia y cómoda para viajes largos.',
+    novedad: false
+  },
+  {
+    id: 'maleta-grande-paradise-xp-mostaza',
+    nombre: 'MALETA GRANDE PARADISE XP MOSTAZA 54x77x29 cm',
+    imagen: 'Productos/MALETA GRANDE PARADISE XP MOSTAZA 54x77x29 cm 1.jpg',
+    imagenes: [
+      'Productos/MALETA GRANDE PARADISE XP MOSTAZA 54x77x29 cm 1.jpg',
+      'Productos/MALETA GRANDE PARADISE XP MOSTAZA 54x77x29 cm 2.jpg',
+      'Productos/MALETA GRANDE PARADISE XP MOSTAZA 54x77x29 cm 3.jpg'
+    ],
+    precioHtml: '99,99€',
+    precioTexto: '99,99€',
+    categoria: 'otros',
+    descripcion: 'Maleta grande Paradise XP mostaza de 54x77x29 cm, amplia y pensada para organizar bien el equipaje.',
+    novedad: false
+  },
+  {
+    id: 'maleta-mediana-paradise-xp-verde-menta',
+    nombre: 'MALETA MEDIANA PARADISE XP VERDE MENTA 48x67x27 cm',
+    imagen: 'Productos/MALETA MEDIANA PARADISE XP VERDE MENTA 48x67x27 cm 1.jpg',
+    imagenes: [
+      'Productos/MALETA MEDIANA PARADISE XP VERDE MENTA 48x67x27 cm 1.jpg',
+      'Productos/MALETA MEDIANA PARADISE XP VERDE MENTA 48x67x27 cm 2.jpg',
+      'Productos/MALETA MEDIANA PARADISE XP VERDE MENTA 48x67x27 cm 3.jpg'
+    ],
+    precioHtml: '89,99€',
+    precioTexto: '89,99€',
+    categoria: 'otros',
+    descripcion: 'Maleta mediana Paradise XP verde menta de 48x67x27 cm, equilibrada para viajes de varios días.',
     novedad: false
   }
 ];

@@ -42,6 +42,10 @@ window.ComplementosLopezDisponibilidad = {
     'mochila-infantil-lightning-sky': { disponible: true },
     'mochila-infantil-start-sky': { disponible: true },
     'mochila-infantil-sun-sky': { disponible: true },
-    'mochila-infantil-cloud-sky': { disponible: true }
+    'mochila-infantil-cloud-sky': { disponible: true },
+    'maleta-xs-future-plus-turquesa': { disponible: true },
+    'maleta-grande-paradise-xp-rosa': { disponible: true },
+    'maleta-grande-paradise-xp-mostaza': { disponible: true },
+    'maleta-mediana-paradise-xp-verde-menta': { disponible: true }
   }
 };
