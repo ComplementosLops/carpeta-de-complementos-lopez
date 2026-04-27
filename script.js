@@ -1275,16 +1275,123 @@ function decorarProductos(root = document) {
   root.querySelectorAll('.producto').forEach(decorarTarjetaProducto);
 }
 
+function mezclarProductos(productos) {
+  const copia = [...productos];
+  for (let indice = copia.length - 1; indice > 0; indice -= 1) {
+    const aleatorio = Math.floor(Math.random() * (indice + 1));
+    [copia[indice], copia[aleatorio]] = [copia[aleatorio], copia[indice]];
+  }
+  return copia;
+}
+
+function crearTarjetaProducto(producto) {
+  const normalizado = normalizarProducto(producto);
+  const card = document.createElement('article');
+  const imagenPrincipal = normalizado.imagen || normalizado.imagenes[0] || '';
+  const imagenHover = normalizado.imagenes.find(imagen => imagen !== imagenPrincipal) || '';
+
+  card.className = 'producto';
+  card.dataset.productoId = normalizado.id;
+  card.dataset.categoria = normalizado.categoria;
+  card.dataset.img = imagenPrincipal;
+  if (imagenHover) card.dataset.imgHover = imagenHover;
+  normalizado.imagenes.slice(1, 3).forEach((imagen, index) => {
+    card.dataset[`img${index + 2}`] = imagen;
+  });
+  card.dataset.descripcion = normalizado.descripcion;
+  card.dataset.novedad = normalizado.novedad ? 'true' : 'false';
+  card.dataset.productoJson = JSON.stringify(normalizado);
+  card.innerHTML = `
+    <img src="${escaparHtml(imagenPrincipal)}" alt="${escaparHtml(normalizado.nombre)}">
+    <h3>${escaparHtml(normalizado.nombre)}</h3>
+    <p class="precio">${normalizado.precioHtml}</p>
+  `;
+
+  return card;
+}
+
+function obtenerSeleccionPortada(categoria, productosIniciales) {
+  const catalogo = obtenerCatalogo();
+
+  if (categoria === 'todos') {
+    return productosIniciales.slice(0, 8);
+  }
+
+  if (categoria === 'otros') {
+    return mezclarProductos(catalogo).slice(0, 8);
+  }
+
+  return catalogo
+    .filter(producto => producto.categoria === categoria)
+    .slice(0, 8);
+}
+
+function renderizarProductosPortada(grid, productos) {
+  grid.innerHTML = '';
+
+  productos.forEach(producto => {
+    grid.appendChild(crearTarjetaProducto(producto));
+  });
+
+  if (!productos.length) {
+    grid.innerHTML = '<p class="estado-vacio">No hay productos de esta categoría en el catálogo.</p>';
+    return;
+  }
+
+  decorarProductos(grid);
+  activarTarjetasProducto('#Productos .producto');
+  activarHoverImagen('#Productos .producto');
+  actualizarEstadoFavoritos();
+}
+
+function ordenarCatalogoAleatorio(grid, productos, categoria) {
+  if (!grid || !['todos', 'otros'].includes(categoria)) return false;
+
+  const tarjetas = [...productos];
+  const visibles = categoria === 'todos'
+    ? tarjetas
+    : tarjetas.filter(producto => normalizarCategoria(producto.getAttribute('data-categoria') || '') === categoria);
+  const ocultas = categoria === 'todos'
+    ? []
+    : tarjetas.filter(producto => normalizarCategoria(producto.getAttribute('data-categoria') || '') !== categoria);
+
+  mezclarProductos(visibles).forEach(producto => {
+    producto.style.display = 'block';
+    grid.appendChild(producto);
+  });
+
+  ocultas.forEach(producto => {
+    producto.style.display = 'none';
+    grid.appendChild(producto);
+  });
+
+  return true;
+}
+
 function activarFiltros() {
   const botones = document.querySelectorAll('.filtro-btn');
   const productos = document.querySelectorAll('#Productos .producto');
   if (!botones.length || !productos.length) return;
+  const seccionProductos = document.querySelector('#Productos');
+  const grid = seccionProductos?.querySelector('.grid-productos');
+  const esPortada = seccionProductos && !seccionProductos.classList.contains('catalogo-productos') && grid;
+  const productosIniciales = esPortada ? [...productos].map(obtenerProductoDesdeCard) : [];
 
   botones.forEach(boton => {
     boton.addEventListener('click', () => {
       botones.forEach(item => item.classList.remove('active'));
       boton.classList.add('active');
       const categoria = normalizarCategoria(boton.textContent);
+
+      if (esPortada) {
+        renderizarProductosPortada(grid, obtenerSeleccionPortada(categoria, productosIniciales));
+        return;
+      }
+
+      if (seccionProductos?.classList.contains('catalogo-productos') && ordenarCatalogoAleatorio(grid, productos, categoria)) {
+        return;
+      }
+
       productos.forEach(producto => {
         const tipo = normalizarCategoria(producto.getAttribute('data-categoria') || '');
         producto.style.display = categoria === 'todos' || tipo === categoria ? 'block' : 'none';
@@ -1312,12 +1419,14 @@ function activarTarjetasProducto(selector = '.producto') {
   });
 }
 
-function activarHoverImagen() {
-  document.querySelectorAll('#Productos .producto').forEach(producto => {
+function activarHoverImagen(selector = '#Productos .producto') {
+  document.querySelectorAll(selector).forEach(producto => {
+    if (producto.dataset.hoverBound === 'true') return;
     const img = producto.querySelector('img');
     const original = producto.dataset.img || img?.getAttribute('src');
     const hover = producto.getAttribute('data-img-hover');
     if (!img || !original || !hover) return;
+    producto.dataset.hoverBound = 'true';
 
     img.style.transition = 'opacity 0.3s ease';
 
@@ -1507,11 +1616,6 @@ function inicializarMenuMovil() {
       if (abrir) {
         header.classList.add('menu-abierto');
         toggle.setAttribute('aria-expanded', 'true');
-        if (window.matchMedia('(max-width: 640px)').matches) {
-          requestAnimationFrame(() => {
-            header.querySelector('.header-tools .buscador-input')?.focus();
-          });
-        }
       } else {
         cerrarMenuMovil(header);
       }

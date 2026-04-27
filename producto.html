@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producto - Complementos López</title>
     <meta name="description" content="Ficha de producto de Complementos López con imágenes, precio orientativo, disponibilidad y datos de contacto para visitar la tienda.">
+    <link rel="canonical" href="https://www.complementoslopeznava.es/producto.html">
     <script id="producto-breadcrumb-schema" type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -14,19 +15,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Inicio",
-          "item": "index.html#top"
+          "item": "https://www.complementoslopeznava.es/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Catálogo",
-          "item": "catalogo.html"
+          "item": "https://www.complementoslopeznava.es/catalogo.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Producto",
-          "item": "producto.html"
+          "item": "https://www.complementoslopeznava.es/producto.html"
         }
       ]
     }
@@ -436,19 +437,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     '@type': 'ListItem',
                     position: 1,
                     name: 'Inicio',
-                    item: 'index.html#top'
+                    item: 'https://www.complementoslopeznava.es/'
                 },
                 {
                     '@type': 'ListItem',
                     position: 2,
                     name: 'Catálogo',
-                    item: 'catalogo.html'
+                    item: 'https://www.complementoslopeznava.es/catalogo.html'
                 },
                 {
                     '@type': 'ListItem',
                     position: 3,
                     name: productoActivo.nombre,
-                    item: 'producto.html'
+                    item: 'https://www.complementoslopeznava.es/producto.html'
                 }
             ]
         });
@@ -512,23 +513,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    function mezclarProductos(productos) {
+        const copia = [...productos];
+        for (let indice = copia.length - 1; indice > 0; indice -= 1) {
+            const aleatorio = Math.floor(Math.random() * (indice + 1));
+            [copia[indice], copia[aleatorio]] = [copia[aleatorio], copia[indice]];
+        }
+        return copia;
+    }
+
+    function seleccionarRelacionados() {
+        const candidatos = catalogo.filter(item => item.id !== producto.id);
+        const categoriasCruzadas = ['bolsos', 'carteras', 'mochila'];
+
+        if (!categoriasCruzadas.includes(producto.categoria)) {
+            return mezclarProductos(candidatos.filter(item => item.categoria === producto.categoria)).slice(0, 16);
+        }
+
+        const extras = categoriasCruzadas
+            .filter(categoria => categoria !== producto.categoria)
+            .flatMap(categoria => mezclarProductos(candidatos.filter(item => item.categoria === categoria)).slice(0, 2));
+        const principales = mezclarProductos(candidatos.filter(item => item.categoria === producto.categoria)).slice(0, 16 - extras.length);
+
+        return mezclarProductos([...principales, ...extras]).slice(0, 16);
+    }
+
     relacionadosContainer.innerHTML = '';
 
-    catalogo
-        .filter(item => item.id !== producto.id && item.categoria === producto.categoria)
-        .slice(0, 4)
-        .forEach(item => {
-            const card = document.createElement('article');
-            card.className = 'producto relacionado-item';
-            card.dataset.productoJson = JSON.stringify(item);
-            card.innerHTML = `
-                <img src="${datos.escaparHtml(item.imagen)}" alt="${datos.escaparHtml(item.nombre)}">
-                <h3>${datos.escaparHtml(item.nombre)}</h3>
-                <p class="precio">${item.precioHtml}</p>
-            `;
+    seleccionarRelacionados().forEach(item => {
+        const card = document.createElement('article');
+        card.className = 'producto relacionado-item';
+        card.dataset.productoJson = JSON.stringify(item);
+        card.innerHTML = `
+            <img src="${datos.escaparHtml(item.imagen)}" alt="${datos.escaparHtml(item.nombre)}">
+            <h3>${datos.escaparHtml(item.nombre)}</h3>
+            <p class="precio">${item.precioHtml}</p>
+        `;
 
-            relacionadosContainer.appendChild(card);
-        });
+        relacionadosContainer.appendChild(card);
+    });
 
     if (!relacionadosContainer.children.length) {
         relacionadosContainer.innerHTML = '<p class="estado-vacio">Aún no hay más productos de esta categoría, pero iremos ampliando el catálogo.</p>';
