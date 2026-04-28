@@ -23,7 +23,10 @@ const RUTA_IMAGEN_ALIASES = {
   'Productos/RIÑONERA AURALIS 3.jpg.webp': 'Productos/RINONERA AURALIS 3.jpg.webp',
   'Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  1.jpg': 'Productos/CARTERA BILLETERA CON CIERRE BOTON Y LLAVERO PIEL NEGRA 1.jpg',
   'Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  2.jpg': 'Productos/CARTERA BILLETERA CON CIERRE BOTON Y LLAVERO PIEL NEGRA 2.jpg',
-  'Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  3.jpg': 'Productos/CARTERA BILLETERA CON CIERRE BOTON Y LLAVERO PIEL NEGRA 3.jpg'
+  'Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  3.jpg': 'Productos/CARTERA BILLETERA CON CIERRE BOTON Y LLAVERO PIEL NEGRA 3.jpg',
+  'Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 1.jpg': 'Productos/CARTERA PEQUENA CON BILLETERA MONEDERO BICOLOR 1.jpg',
+  'Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 2.jpg': 'Productos/CARTERA PEQUENA CON BILLETERA MONEDERO BICOLOR 2.jpg',
+  'Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 3.jpg': 'Productos/CARTERA PEQUENA CON BILLETERA MONEDERO BICOLOR 3.jpg'
 };
 
 const catalogoBase = [
@@ -757,11 +760,11 @@ const catalogoBase = [
   {
     id: 'cartera-pequena-billetera-monedero-bicolor',
     nombre: 'CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR',
-    imagen: 'Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 1.jpg',
+    imagen: 'Productos/CARTERA PEQUENA CON BILLETERA MONEDERO BICOLOR 1.jpg',
     imagenes: [
-      'Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 1.jpg',
-      'Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 2.jpg',
-      'Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 3.jpg'
+      'Productos/CARTERA PEQUENA CON BILLETERA MONEDERO BICOLOR 1.jpg',
+      'Productos/CARTERA PEQUENA CON BILLETERA MONEDERO BICOLOR 2.jpg',
+      'Productos/CARTERA PEQUENA CON BILLETERA MONEDERO BICOLOR 3.jpg'
     ],
     precioHtml: '27,99€',
     precioTexto: '27,99€',
@@ -861,7 +864,7 @@ const catalogoBase = [
   },
   {
     id: 'maleta-xs-future-plus-turquesa',
-    nombre: 'MALETA XS FUTURE PLUS TURQUESA 30x42x20 cm',
+    nombre: 'MALETA XS FUTURE PLUS TURQUESA',
     imagen: 'Productos/MALETA XS FUTURE PLUS TURQUESA 30x42x20 cm 1.jpg',
     imagenes: [
       'Productos/MALETA XS FUTURE PLUS TURQUESA 30x42x20 cm 1.jpg',
@@ -876,7 +879,7 @@ const catalogoBase = [
   },
   {
     id: 'maleta-grande-paradise-xp-rosa',
-    nombre: 'MALETA GRANDE PARADISE XP ROSA 54x77x29 cm',
+    nombre: 'MALETA GRANDE PARADISE XP ROSA',
     imagen: 'Productos/MALETA GRANDE PARADISE XP ROSA 54x77x29 cm 1.jpg',
     imagenes: [
       'Productos/MALETA GRANDE PARADISE XP ROSA 54x77x29 cm 1.jpg',
@@ -891,7 +894,7 @@ const catalogoBase = [
   },
   {
     id: 'maleta-grande-paradise-xp-mostaza',
-    nombre: 'MALETA GRANDE PARADISE XP MOSTAZA 54x77x29 cm',
+    nombre: 'MALETA GRANDE PARADISE XP MOSTAZA',
     imagen: 'Productos/MALETA GRANDE PARADISE XP MOSTAZA 54x77x29 cm 1.jpg',
     imagenes: [
       'Productos/MALETA GRANDE PARADISE XP MOSTAZA 54x77x29 cm 1.jpg',
@@ -906,7 +909,7 @@ const catalogoBase = [
   },
   {
     id: 'maleta-mediana-paradise-xp-verde-menta',
-    nombre: 'MALETA MEDIANA PARADISE XP VERDE MENTA 48x67x27 cm',
+    nombre: 'MALETA MEDIANA PARADISE XP VERDE MENTA',
     imagen: 'Productos/MALETA MEDIANA PARADISE XP VERDE MENTA 48x67x27 cm 1.jpg',
     imagenes: [
       'Productos/MALETA MEDIANA PARADISE XP VERDE MENTA 48x67x27 cm 1.jpg',
@@ -917,6 +920,66 @@ const catalogoBase = [
     precioTexto: '89,99€',
     categoria: 'otros',
     descripcion: 'Maleta mediana Paradise XP verde menta de 48x67x27 cm, equilibrada para viajes de varios días.',
+    novedad: false
+  },
+  {
+    id: 'maleta-mediana-future-plus-turquesa',
+    nombre: 'MALETA MEDIANA FUTURE PLUS TURQUESA',
+    imagen: 'Productos/MALETA MEDIANA FUTURE PLUS TURQUESA 1.jpg',
+    imagenes: [
+      'Productos/MALETA MEDIANA FUTURE PLUS TURQUESA 1.jpg',
+      'Productos/MALETA MEDIANA FUTURE PLUS TURQUESA 2.jpg',
+      'Productos/MALETA MEDIANA FUTURE PLUS TURQUESA 3.jpg'
+    ],
+    precioHtml: '77,99€',
+    precioTexto: '77,99€',
+    categoria: 'otros',
+    descripcion: 'Maleta mediana Future Plus turquesa de 47x66x27 cm, práctica para viajes de varios días.',
+    novedad: false
+  },
+  {
+    id: 'maleta-mediana-future-plus-azul-marino',
+    nombre: 'MALETA MEDIANA FUTURE PLUS AZUL MARINO',
+    imagen: 'Productos/MALETA MEDIANA FUTURE PLUS AZUL MARINO 1.jpg',
+    imagenes: [
+      'Productos/MALETA MEDIANA FUTURE PLUS AZUL MARINO 1.jpg',
+      'Productos/MALETA MEDIANA FUTURE PLUS AZUL MARINO 2.jpg',
+      'Productos/MALETA MEDIANA FUTURE PLUS AZUL MARINO 3.jpg'
+    ],
+    precioHtml: '77,99€',
+    precioTexto: '77,99€',
+    categoria: 'otros',
+    descripcion: 'Maleta mediana Future Plus azul marino de 47x66x27 cm, resistente y cómoda para organizar el equipaje.',
+    novedad: false
+  },
+  {
+    id: 'maleta-mediana-future-plus-amarillo',
+    nombre: 'MALETA MEDIANA FUTURE PLUS AMARILLO',
+    imagen: 'Productos/MALETA MEDIANA FUTURE PLUS AMARILLO 1.jpg',
+    imagenes: [
+      'Productos/MALETA MEDIANA FUTURE PLUS AMARILLO 1.jpg',
+      'Productos/MALETA MEDIANA FUTURE PLUS AMARILLO 2.jpg',
+      'Productos/MALETA MEDIANA FUTURE PLUS AMARILLO 3.jpg'
+    ],
+    precioHtml: '77,99€',
+    precioTexto: '77,99€',
+    categoria: 'otros',
+    descripcion: 'Maleta mediana Future Plus amarillo de 47x66x27 cm, visible, práctica y con buena capacidad.',
+    novedad: false
+  },
+  {
+    id: 'maleta-mediana-future-plus-coral',
+    nombre: 'MALETA MEDIANA FUTURE PLUS CORAL',
+    imagen: 'Productos/MALETA MEDIANA FUTURE PLUS CORAL 1.jpg',
+    imagenes: [
+      'Productos/MALETA MEDIANA FUTURE PLUS CORAL 1.jpg',
+      'Productos/MALETA MEDIANA FUTURE PLUS CORAL 2.jpg',
+      'Productos/MALETA MEDIANA FUTURE PLUS CORAL 3.jpg'
+    ],
+    precioHtml: '77,99€',
+    precioTexto: '77,99€',
+    categoria: 'otros',
+    descripcion: 'Maleta mediana Future Plus coral de 47x66x27 cm, cómoda para escapadas y viajes de media duración.',
     novedad: false
   }
 ];

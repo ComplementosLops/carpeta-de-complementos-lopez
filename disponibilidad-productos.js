@@ -46,6 +46,10 @@ window.ComplementosLopezDisponibilidad = {
     'maleta-xs-future-plus-turquesa': { disponible: true },
     'maleta-grande-paradise-xp-rosa': { disponible: true },
     'maleta-grande-paradise-xp-mostaza': { disponible: true },
-    'maleta-mediana-paradise-xp-verde-menta': { disponible: true }
+    'maleta-mediana-paradise-xp-verde-menta': { disponible: true },
+    'maleta-mediana-future-plus-turquesa': { disponible: true },
+    'maleta-mediana-future-plus-azul-marino': { disponible: true },
+    'maleta-mediana-future-plus-amarillo': { disponible: true },
+    'maleta-mediana-future-plus-coral': { disponible: true }
   }
 };
