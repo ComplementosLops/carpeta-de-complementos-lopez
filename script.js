@@ -26,7 +26,9 @@ const RUTA_IMAGEN_ALIASES = {
   'Productos/CARTERA BILLETERA CON CIERRE BOTÓN Y LLAVERO PIEL NEGRA  3.jpg': 'Productos/CARTERA BILLETERA CON CIERRE BOTON Y LLAVERO PIEL NEGRA 3.jpg',
   'Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 1.jpg': 'Productos/CARTERA PEQUENA CON BILLETERA MONEDERO BICOLOR 1.jpg',
   'Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 2.jpg': 'Productos/CARTERA PEQUENA CON BILLETERA MONEDERO BICOLOR 2.jpg',
-  'Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 3.jpg': 'Productos/CARTERA PEQUENA CON BILLETERA MONEDERO BICOLOR 3.jpg'
+  'Productos/CARTERA PEQUEÑA CON BILLETERA MONEDERO BICOLOR 3.jpg': 'Productos/CARTERA PEQUENA CON BILLETERA MONEDERO BICOLOR 3.jpg',
+  'Productos/METALLIC ROSE 750ml  1.jpg.webp': 'Productos/METALLIC ROSE 750ml 1.jpg.webp',
+  'Productos/METALLIC ROSE 750ml  2.jpg.webp': 'Productos/METALLIC ROSE 750ml 2.jpg.webp'
 };
 
 const catalogoBase = [
@@ -71,6 +73,21 @@ const catalogoBase = [
     novedad: false
   },
   {
+    id: 'metallic-rose-750ml',
+    nombre: 'METALLIC ROSE 750 ml',
+    imagen: 'Productos/METALLIC ROSE 750ml 1.jpg.webp',
+    imagenes: [
+      'Productos/METALLIC ROSE 750ml 1.jpg.webp',
+      'Productos/METALLIC ROSE 750ml 2.jpg.webp',
+      'Productos/METALLIC ROSE 750ml 3.jpg.webp'
+    ],
+    precioHtml: '29,95€',
+    precioTexto: '29,95€',
+    categoria: 'botellas',
+    descripcion: 'Botella Metallic Rose de 750 ml, reutilizable y práctica para llevar agua a diario.',
+    novedad: false
+  },
+  {
     id: 'botella-infantil-african-safari-260ml',
     nombre: 'BOTELLA INFANTIL - AFRICAN SAFARI 260 ml',
     imagen: 'Productos/BOTELLA INFANTIL - AFRICAN SAFARI 260ml 1.jpg.webp',
@@ -79,8 +96,8 @@ const catalogoBase = [
       'Productos/BOTELLA INFANTIL - AFRICAN SAFARI 260ml 2.webp',
       'Productos/BOTELLA INFANTIL - AFRICAN SAFARI 260ml 3.jpg.webp'
     ],
-    precioHtml: 'Consultar',
-    precioTexto: 'Consultar',
+    precioHtml: '24,95€',
+    precioTexto: '24,95€',
     categoria: 'botellas',
     descripcion: 'Botella infantil African Safari de 260 ml, compacta y fácil de sujetar para peques. Su tamaño resulta práctico para mochila escolar, excursiones o salidas cortas.',
     novedad: false
@@ -94,8 +111,8 @@ const catalogoBase = [
       'Productos/TERMO PASTEL PINK 550ml 2.png.webp',
       'Productos/TERMO PASTEL PINK 550ml 3.jpg.webp'
     ],
-    precioHtml: 'Consultar',
-    precioTexto: 'Consultar',
+    precioHtml: '23,95€',
+    precioTexto: '23,95€',
     categoria: 'botellas',
     descripcion: 'Termo Pastel Pink con acabado suave y formato pensado para llevar bebida caliente o fría durante la jornada. Disponible en capacidades compactas para adaptar el uso diario.',
     novedad: false,
@@ -111,8 +128,8 @@ const catalogoBase = [
           'Productos/TERMO PASTEL PINK 330ml 2.webp',
           'Productos/TERMO PASTEL PINK 330ml 3.jpg.webp'
         ],
-        precioHtml: 'Consultar',
-        precioTexto: 'Consultar',
+        precioHtml: '21,95€',
+        precioTexto: '21,95€',
         descripcion: 'Termo Pastel Pink de 330 ml, compacto y fácil de llevar en bolso o mochila pequeña sin ocupar demasiado espacio.'
       },
       {
@@ -125,9 +142,70 @@ const catalogoBase = [
           'Productos/TERMO PASTEL PINK 550ml 2.png.webp',
           'Productos/TERMO PASTEL PINK 550ml 3.jpg.webp'
         ],
-        precioHtml: 'Consultar',
-        precioTexto: 'Consultar',
+        precioHtml: '23,95€',
+        precioTexto: '23,95€',
         descripcion: 'Termo Pastel Pink de 550 ml, práctico para llevar más cantidad de bebida durante el día sin perder comodidad de transporte.'
+      }
+    ]
+  },
+  {
+    id: 'termo-ibiza-330ml',
+    nombre: 'TERMO IBIZA 330 ml',
+    imagen: 'Productos/TERMO IBIZA 330ml 1.png.webp',
+    imagenes: [
+      'Productos/TERMO IBIZA 330ml 1.png.webp',
+      'Productos/TERMO IBIZA 330ml 2.jpg.webp',
+      'Productos/TERMO IBIZA 330ml 3.png.webp'
+    ],
+    precioHtml: '21,99€',
+    precioTexto: '21,99€',
+    categoria: 'botellas',
+    descripcion: 'Termo Ibiza de 330 ml, compacto y cómodo para llevar bebida caliente o fría.',
+    novedad: false
+  },
+  {
+    id: 'termo-mono-white-550ml',
+    nombre: 'TERMO MONO WHITE 550 ml',
+    imagen: 'Productos/TERMO MONO WHITE 550ml 1.png.webp',
+    imagenes: [
+      'Productos/TERMO MONO WHITE 550ml 1.png.webp',
+      'Productos/TERMO MONO WHITE 550ml 2.jpg.webp',
+      'Productos/TERMO MONO WHITE 550ml 3.jpg.webp'
+    ],
+    precioHtml: '23,95€',
+    precioTexto: '23,95€',
+    categoria: 'botellas',
+    descripcion: 'Termo Mono White disponible en 330 ml y 550 ml, con acabado limpio y formato práctico para bebidas calientes o frías.',
+    novedad: false,
+    capacidadActiva: '550ml',
+    variantesCapacidad: [
+      {
+        id: '330ml',
+        etiqueta: '330 ml',
+        nombre: 'TERMO MONO WHITE 330 ml',
+        imagen: 'Productos/TERMO MONO WHITE 330ml 1.png.webp',
+        imagenes: [
+          'Productos/TERMO MONO WHITE 330ml 1.png.webp',
+          'Productos/TERMO MONO WHITE 330ml 2.jpg.webp',
+          'Productos/TERMO MONO WHITE 330ml 3.webp'
+        ],
+        precioHtml: '21,99€',
+        precioTexto: '21,99€',
+        descripcion: 'Termo Mono White de 330 ml, compacto y fácil de llevar en bolso o mochila pequeña.'
+      },
+      {
+        id: '550ml',
+        etiqueta: '550 ml',
+        nombre: 'TERMO MONO WHITE 550 ml',
+        imagen: 'Productos/TERMO MONO WHITE 550ml 1.png.webp',
+        imagenes: [
+          'Productos/TERMO MONO WHITE 550ml 1.png.webp',
+          'Productos/TERMO MONO WHITE 550ml 2.jpg.webp',
+          'Productos/TERMO MONO WHITE 550ml 3.jpg.webp'
+        ],
+        precioHtml: '23,95€',
+        precioTexto: '23,95€',
+        descripcion: 'Termo Mono White de 550 ml, práctico para llevar más cantidad de bebida durante el día.'
       }
     ]
   },

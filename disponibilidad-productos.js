@@ -1,11 +1,14 @@
 window.ComplementosLopezDisponibilidad = {
-  actualizacion: '2026-04-26',
+  actualizacion: '2026-04-29',
   productos: {
     'mochila-muse': { disponible: true },
     'mochila-amphora': { disponible: true },
     'botella-vivid-violet': { disponible: true },
     'botella-infantil-african-safari-260ml': { disponible: true },
+    'metallic-rose-750ml': { disponible: true },
     'termo-pastel-pink-550ml': { disponible: true },
+    'termo-ibiza-330ml': { disponible: true },
+    'termo-mono-white-550ml': { disponible: true },
     'botella-sport-brisbane-950ml': { disponible: true },
     'botella-sport-los-angeles-950ml': { disponible: true },
     'botella-sport-tokyo-950ml': { disponible: true },
