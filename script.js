@@ -1,11 +1,11 @@
 const FAVORITOS_KEY = 'favoritosProductos';
-const CATALOGO_STORAGE_KEY = 'catalogoTemporal';
+const CATALOGO_STORAGE_KEY = 'catalogoTemporal20260505';
 const PRODUCTO_STORAGE_KEY = 'productoSeleccionado';
+const DESCUENTO_OFERTA_AUTOMATICA = 0.2;
 const PRODUCTO_ID_ALIASES = {
   'mochila-pequeña-olympia': 'mochila-pequena-olympia'
 };
 const RUTA_IMAGEN_ALIASES = {
-  'Productos/CINTURÓN DE PIEL HEBILLA PLATEADA COWBOY CUERO.jpg': 'Productos/CINTURON DE PIEL HEBILLA PLATEADA COWBOY CUERO.jpg',
   'Productos/BILLETERO PEQUEÑO OLYMPIA 1.jpg.webp': 'Productos/BILLETERO PEQUENO OLYMPIA 1.jpg.webp',
   'Productos/BILLETERO PEQUEÑO OLYMPIA 2.jpg.webp': 'Productos/BILLETERO PEQUENO OLYMPIA 2.jpg.webp',
   'Productos/BILLETERO PEQUEÑO OLYMPIA 3.jpg.webp': 'Productos/BILLETERO PEQUENO OLYMPIA 3.jpg.webp',
@@ -170,7 +170,7 @@ const catalogoBase = [
     imagenes: [
       'Productos/TERMO MONO WHITE 550ml 1.png.webp',
       'Productos/TERMO MONO WHITE 550ml 2.jpg.webp',
-      'Productos/TERMO MONO WHITE 550ml 3.jpg.webp'
+      'Productos/TERMO MONO WHITE 550ml 3.png.webp'
     ],
     precioHtml: '23,95€',
     precioTexto: '23,95€',
@@ -201,13 +201,58 @@ const catalogoBase = [
         imagenes: [
           'Productos/TERMO MONO WHITE 550ml 1.png.webp',
           'Productos/TERMO MONO WHITE 550ml 2.jpg.webp',
-          'Productos/TERMO MONO WHITE 550ml 3.jpg.webp'
+          'Productos/TERMO MONO WHITE 550ml 3.png.webp'
         ],
         precioHtml: '23,95€',
         precioTexto: '23,95€',
         descripcion: 'Termo Mono White de 550 ml, práctico para llevar más cantidad de bebida durante el día.'
       }
     ]
+  },
+  {
+    id: 'botella-pastel-sky-750ml',
+    nombre: 'BOTELLA PASTEL SKY 750 ml',
+    imagen: 'Productos/BOTELLA PASTEL SKY 750ml 1.jpg.webp',
+    imagenes: [
+      'Productos/BOTELLA PASTEL SKY 750ml 1.jpg.webp',
+      'Productos/BOTELLA PASTEL SKY 750ml 2.jpg.webp',
+      'Productos/BOTELLA PASTEL SKY 750ml 3.jpg.webp'
+    ],
+    precioHtml: '29,95€',
+    precioTexto: '29,95€',
+    categoria: 'botellas',
+    descripcion: 'Botella Pastel Sky de 750 ml, reutilizable y práctica para llevar agua a diario.',
+    novedad: false
+  },
+  {
+    id: 'botella-pastel-green-750ml',
+    nombre: 'BOTELLA PASTEL GREEN 750 ml',
+    imagen: 'Productos/BOTELLA PASTEL GREEN 750ml 1.jpg.webp',
+    imagenes: [
+      'Productos/BOTELLA PASTEL GREEN 750ml 1.jpg.webp',
+      'Productos/BOTELLA PASTEL GREEN 750ml 2.jpg.webp',
+      'Productos/BOTELLA PASTEL GREEN 750ml 3.jpg.webp'
+    ],
+    precioHtml: '29,95€',
+    precioTexto: '29,95€',
+    categoria: 'botellas',
+    descripcion: 'Botella Pastel Green de 750 ml, reutilizable y cómoda para hidratarse fuera de casa.',
+    novedad: false
+  },
+  {
+    id: 'botella-mono-white-750ml',
+    nombre: 'BOTELLA MONO WHITE 750 ml',
+    imagen: 'Productos/BOTELLA MONO WHITE 750ml 1.jpg.webp',
+    imagenes: [
+      'Productos/BOTELLA MONO WHITE 750ml 1.jpg.webp',
+      'Productos/BOTELLA MONO WHITE 750ml 2.jpg.webp',
+      'Productos/BOTELLA MONO WHITE 750ml 3.jpg.webp'
+    ],
+    precioHtml: '29,95€',
+    precioTexto: '29,95€',
+    categoria: 'botellas',
+    descripcion: 'Botella Mono White de 750 ml, reutilizable y de diseño limpio para el día a día.',
+    novedad: false
   },
   {
     id: 'botella-sport-brisbane-950ml',
@@ -450,16 +495,48 @@ const catalogoBase = [
     ]
   },
   {
-    id: 'cinturon-cowboy',
-    nombre: 'Cinturón de piel hebilla plateada cowboy cuero',
-    imagen: 'Productos/CINTURON DE PIEL HEBILLA PLATEADA COWBOY CUERO.jpg',
-    imagenes: ['Productos/CINTURON DE PIEL HEBILLA PLATEADA COWBOY CUERO.jpg'],
-    precioHtml: '<span class="precio-antiguo">45,00€</span><span class="precio-nuevo">36,29€</span>',
-    precioTexto: '45,00€ 36,29€',
-    precioAntiguo: '45,00€',
-    precioNuevo: '36,29€',
+    id: 'cinturon-reversible-piel-vacuno',
+    nombre: 'CINTURÓN REVERSIBLE EN PIEL DE VACUNO',
+    imagen: 'Productos/CINTURON REVERSIBLE EN PIEL DE VACUNO 1.jpg.webp',
+    imagenes: [
+      'Productos/CINTURON REVERSIBLE EN PIEL DE VACUNO 1.jpg.webp',
+      'Productos/CINTURON REVERSIBLE EN PIEL DE VACUNO 2.jpg.webp',
+      'Productos/CINTURON REVERSIBLE EN PIEL DE VACUNO 3.jpg.webp'
+    ],
+    precioHtml: '35,00€',
+    precioTexto: '35,00€',
     categoria: 'otros',
-    descripcion: 'Cinturón de piel en color cuero con hebilla plateada estilo cowboy. Una pieza versátil para rematar vaqueros, vestidos o conjuntos informales con presencia.',
+    descripcion: 'Cinturón reversible en piel de vacuno, versátil y fácil de combinar.',
+    novedad: false
+  },
+  {
+    id: 'cinturon-reversible-piel-vacuno-marron-claro',
+    nombre: 'CINTURÓN REVERSIBLE EN PIEL DE VACUNO MARRÓN CLARO',
+    imagen: 'Productos/CINTURON REVERSIBLE EN PIEL DE VACUNO MARRON CLARO 1.jpg.webp',
+    imagenes: [
+      'Productos/CINTURON REVERSIBLE EN PIEL DE VACUNO MARRON CLARO 1.jpg.webp',
+      'Productos/CINTURON REVERSIBLE EN PIEL DE VACUNO MARRON CLARO 2.jpg.webp',
+      'Productos/CINTURON REVERSIBLE EN PIEL DE VACUNO MARRON CLARO 3.jpg.webp'
+    ],
+    precioHtml: '35,00€',
+    precioTexto: '35,00€',
+    categoria: 'otros',
+    descripcion: 'Cinturón reversible en piel de vacuno marrón claro, cómodo para looks diarios.',
+    novedad: false
+  },
+  {
+    id: 'cinturon-reversible-piel-vacuno-marron-negro',
+    nombre: 'CINTURÓN REVERSIBLE EN PIEL DE VACUNO MARRÓN/NEGRO',
+    imagen: 'Productos/CINTURON REVERSIBLE EN PIEL DE VACUNO MARRON NEGRO 1.jpg.webp',
+    imagenes: [
+      'Productos/CINTURON REVERSIBLE EN PIEL DE VACUNO MARRON NEGRO 1.jpg.webp',
+      'Productos/CINTURON REVERSIBLE EN PIEL DE VACUNO MARRON NEGRO 2.jpg.webp',
+      'Productos/CINTURON REVERSIBLE EN PIEL DE VACUNO MARRON NEGRO 3.jpg.webp'
+    ],
+    precioHtml: '35,00€',
+    precioTexto: '35,00€',
+    categoria: 'otros',
+    descripcion: 'Cinturón reversible en piel de vacuno marrón y negro, práctico para alternar dos acabados.',
     novedad: false
   },
   {
@@ -1172,6 +1249,43 @@ function estaAgotado(producto) {
   return Boolean(producto.agotado) || esPrecioAgotado(producto.precioTexto) || esPrecioAgotado(producto.precioHtml);
 }
 
+function debeAplicarOfertaAutomatica(producto = {}, contexto = {}) {
+  const id = normalizarIdProducto(contexto.id || producto.id || '');
+  const categoria = normalizarCategoria(contexto.categoria || producto.categoria || '');
+
+  return categoria === 'botellas' || id.startsWith('maleta-') || id.startsWith('cinturon-');
+}
+
+function calcularPrecioConDescuento(precio = '') {
+  const valor = extraerValorNumerico(precio);
+  if (!valor) return '';
+
+  const rebajado = Math.round(valor * (1 - DESCUENTO_OFERTA_AUTOMATICA) * 100) / 100;
+  return formatearPrecioTotal(rebajado);
+}
+
+function crearPrecioOfertaHtml(precioAntiguo, precioNuevo) {
+  return `<span class="precio-antiguo">${escaparHtml(precioAntiguo)}</span><span class="precio-nuevo">${escaparHtml(precioNuevo)}</span>`;
+}
+
+function aplicarOfertaAutomatica(producto, contexto = {}) {
+  if (!debeAplicarOfertaAutomatica(producto, contexto) || tieneOferta(producto) || estaAgotado(producto)) {
+    return producto;
+  }
+
+  const precioAntiguo = limpiarTexto(producto.precioTexto || quitarHtml(producto.precioHtml));
+  const precioNuevo = calcularPrecioConDescuento(precioAntiguo);
+  if (!precioNuevo) return producto;
+
+  return {
+    ...producto,
+    precioHtml: crearPrecioOfertaHtml(precioAntiguo, precioNuevo),
+    precioTexto: `${precioAntiguo} ${precioNuevo}`,
+    precioAntiguo,
+    precioNuevo
+  };
+}
+
 function fallbackProductoBase(producto) {
   return catalogoBase.find(item => item.id === producto.id || item.nombre === producto.nombre) || {};
 }
@@ -1201,7 +1315,7 @@ function resolverRutaImagen(ruta, fallback = {}) {
   return encontrada || rutaNormalizada;
 }
 
-function normalizarVarianteCapacidad(variante = {}) {
+function normalizarVarianteCapacidad(variante = {}, contextoProducto = {}) {
   const precioHtmlOriginal = variante.precioHtml || variante.precio || variante.precioTexto || '';
   const precioHtml = sanitizarPrecioHtml(precioHtmlOriginal);
   const precioTexto = limpiarTexto(variante.precioTexto || quitarHtml(precioHtmlOriginal) || variante.precio || '');
@@ -1214,7 +1328,8 @@ function normalizarVarianteCapacidad(variante = {}) {
   );
   const etiqueta = limpiarTexto(variante.etiqueta || variante.capacidad || '');
 
-  return {
+  const preciosDetectados = extraerPreciosDesdeHtml(precioHtmlOriginal);
+  const normalizada = {
     id: variante.id || etiqueta.toLowerCase().replace(/[^a-z0-9]+/g, ''),
     etiqueta,
     nombre: variante.nombre || '',
@@ -1222,17 +1337,21 @@ function normalizarVarianteCapacidad(variante = {}) {
     imagenes,
     precioHtml,
     precioTexto,
+    precioAntiguo: variante.precioAntiguo || preciosDetectados.precioAntiguo || '',
+    precioNuevo: variante.precioNuevo || preciosDetectados.precioNuevo || '',
     descripcion: variante.descripcion || ''
   };
+
+  return aplicarOfertaAutomatica(normalizada, contextoProducto);
 }
 
-function obtenerVariantesCapacidad(producto, fallback) {
+function obtenerVariantesCapacidad(producto, fallback, contextoProducto = {}) {
   const variantesBase = Array.isArray(fallback.variantesCapacidad) ? fallback.variantesCapacidad : [];
   const variantesProducto = Array.isArray(producto.variantesCapacidad) ? producto.variantesCapacidad : [];
   const variantes = variantesBase.length ? variantesBase : variantesProducto;
 
   return variantes
-    .map(normalizarVarianteCapacidad)
+    .map(variante => normalizarVarianteCapacidad(variante, contextoProducto))
     .filter(variante => variante.id && variante.etiqueta);
 }
 
@@ -1243,7 +1362,9 @@ function normalizarProducto(producto) {
   const precioTexto = limpiarTexto(producto.precioTexto || quitarHtml(precioHtmlOriginal) || producto.precio || fallback.precioTexto || '');
   const descripcion = elegirDescripcionProducto(producto.descripcion, fallback.descripcion);
   const preciosDetectados = extraerPreciosDesdeHtml(precioHtmlOriginal);
-  const variantesCapacidad = obtenerVariantesCapacidad(producto, fallback);
+  const id = normalizarIdProducto(producto.id || fallback.id || limpiarTexto(producto.nombre).toLowerCase().replace(/[^a-z0-9]+/g, '-'));
+  const categoria = normalizarCategoria(producto.categoria || fallback.categoria || '');
+  const variantesCapacidad = obtenerVariantesCapacidad(producto, fallback, { id, categoria });
   const imagenes = crearListaImagenes(
     resolverRutaImagen(producto.imagen, fallback),
     ...(producto.imagenes || []).map(imagen => resolverRutaImagen(imagen, fallback)),
@@ -1254,8 +1375,8 @@ function normalizarProducto(producto) {
     ...(fallback.imagenes || [])
   );
 
-  return {
-    id: normalizarIdProducto(producto.id || fallback.id || limpiarTexto(producto.nombre).toLowerCase().replace(/[^a-z0-9]+/g, '-')),
+  const normalizado = {
+    id,
     nombre: producto.nombre || fallback.nombre,
     imagen: resolverRutaImagen(producto.imagen, fallback) || fallback.imagen || imagenes[0] || '',
     imagenes,
@@ -1263,13 +1384,15 @@ function normalizarProducto(producto) {
     precioTexto,
     precioAntiguo: producto.precioAntiguo || fallback.precioAntiguo || preciosDetectados.precioAntiguo || '',
     precioNuevo: producto.precioNuevo || fallback.precioNuevo || preciosDetectados.precioNuevo || '',
-    categoria: normalizarCategoria(producto.categoria || fallback.categoria || ''),
+    categoria,
     descripcion: descripcion || 'Consulta disponibilidad y detalles en tienda.',
     novedad: typeof producto.novedad === 'boolean' ? producto.novedad : Boolean(fallback.novedad),
     agotado: typeof producto.agotado === 'boolean' ? producto.agotado : estaAgotado({ precioHtml, precioTexto }),
     capacidadActiva: producto.capacidadActiva || fallback.capacidadActiva || '',
     variantesCapacidad
   };
+
+  return aplicarOfertaAutomatica(normalizado);
 }
 
 function obtenerProductoDesdeCard(card) {
@@ -1450,7 +1573,7 @@ function decorarTarjetaProducto(card) {
   }
 
   if (tieneOferta(producto)) {
-    badges.appendChild(crearBadge('Oferta', 'badge-oferta-card'));
+    badges.appendChild(crearBadge('-20%', 'badge-oferta-card'));
   }
 
   if (estaAgotado(producto)) {
@@ -1474,6 +1597,11 @@ function decorarTarjetaProducto(card) {
 
   cabecera.appendChild(badges);
   cabecera.appendChild(likeButton);
+
+  const precio = card.querySelector('.precio');
+  if (precio) {
+    precio.innerHTML = producto.precioHtml;
+  }
 
   card.querySelector('.producto-reciente-lista')?.remove();
 }
@@ -2183,13 +2311,14 @@ function inicializarEnlacesAlInicio() {
     const ruta = window.location.pathname.toLowerCase();
     return ruta.endsWith('/index.html') || ruta.endsWith('/') || ruta.endsWith('/carpeta de complementos lopez');
   })();
+  const debeForzarInicio = esMismaRutaInicio && (!window.location.hash || window.location.hash === '#top');
+
+  if (debeForzarInicio && 'scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
   const desplazarAlInicio = () => {
     const scrollingElement = document.scrollingElement || document.documentElement || document.body;
-    const hero = document.getElementById('Inicio');
-
-    if (hero && typeof hero.scrollIntoView === 'function') {
-      hero.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
 
     if (scrollingElement && typeof scrollingElement.scrollTo === 'function') {
       scrollingElement.scrollTo({ top: 0, behavior: 'auto' });
@@ -2205,6 +2334,13 @@ function inicializarEnlacesAlInicio() {
       }
       window.scrollTo(0, 0);
     });
+
+    setTimeout(() => {
+      if (scrollingElement) {
+        scrollingElement.scrollTop = 0;
+      }
+      window.scrollTo(0, 0);
+    }, 80);
   };
 
   document.querySelectorAll('a[href="#top"], a[href="index.html#top"]').forEach(enlace => {
@@ -2228,10 +2364,11 @@ function inicializarEnlacesAlInicio() {
     });
   });
 
-  if (window.location.hash === '#top') {
+  if (debeForzarInicio) {
     requestAnimationFrame(() => {
       desplazarAlInicio();
     });
+    window.addEventListener('load', desplazarAlInicio, { once: true });
   }
 }
 
