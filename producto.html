@@ -101,22 +101,22 @@
     </div>
 </header>
 
-<a href="ofertas.html" class="liquidacion-banner" aria-label="Ver ofertas de liquidación con 20% de descuento">
+<a href="ofertas.html" class="liquidacion-banner" aria-label="Cerrado">
     <span class="liquidacion-banner-pista" aria-hidden="true">
         <span class="liquidacion-banner-grupo">
-            <span class="liquidacion-banner-item"><strong>LIQUIDACIÓN -20%</strong> EN MUCHOS PRODUCTOS <span class="liquidacion-banner-punto">·</span> <span class="liquidacion-banner-cta">VER OFERTAS</span></span>
-            <span class="liquidacion-banner-item"><strong>LIQUIDACIÓN -20%</strong> EN MUCHOS PRODUCTOS <span class="liquidacion-banner-punto">·</span> <span class="liquidacion-banner-cta">VER OFERTAS</span></span>
-            <span class="liquidacion-banner-item"><strong>LIQUIDACIÓN -20%</strong> EN MUCHOS PRODUCTOS <span class="liquidacion-banner-punto">·</span> <span class="liquidacion-banner-cta">VER OFERTAS</span></span>
-            <span class="liquidacion-banner-item"><strong>LIQUIDACIÓN -20%</strong> EN MUCHOS PRODUCTOS <span class="liquidacion-banner-punto">·</span> <span class="liquidacion-banner-cta">VER OFERTAS</span></span>
+            <span class="liquidacion-banner-item"><span class="liquidacion-banner-cerrado">CERRADO</span></span>
+            <span class="liquidacion-banner-item"><span class="liquidacion-banner-cerrado">CERRADO</span></span>
+            <span class="liquidacion-banner-item"><span class="liquidacion-banner-cerrado">CERRADO</span></span>
+            <span class="liquidacion-banner-item"><span class="liquidacion-banner-cerrado">CERRADO</span></span>
         </span>
         <span class="liquidacion-banner-grupo">
-            <span class="liquidacion-banner-item"><strong>LIQUIDACIÓN -20%</strong> EN MUCHOS PRODUCTOS <span class="liquidacion-banner-punto">·</span> <span class="liquidacion-banner-cta">VER OFERTAS</span></span>
-            <span class="liquidacion-banner-item"><strong>LIQUIDACIÓN -20%</strong> EN MUCHOS PRODUCTOS <span class="liquidacion-banner-punto">·</span> <span class="liquidacion-banner-cta">VER OFERTAS</span></span>
-            <span class="liquidacion-banner-item"><strong>LIQUIDACIÓN -20%</strong> EN MUCHOS PRODUCTOS <span class="liquidacion-banner-punto">·</span> <span class="liquidacion-banner-cta">VER OFERTAS</span></span>
-            <span class="liquidacion-banner-item"><strong>LIQUIDACIÓN -20%</strong> EN MUCHOS PRODUCTOS <span class="liquidacion-banner-punto">·</span> <span class="liquidacion-banner-cta">VER OFERTAS</span></span>
+            <span class="liquidacion-banner-item"><span class="liquidacion-banner-cerrado">CERRADO</span></span>
+            <span class="liquidacion-banner-item"><span class="liquidacion-banner-cerrado">CERRADO</span></span>
+            <span class="liquidacion-banner-item"><span class="liquidacion-banner-cerrado">CERRADO</span></span>
+            <span class="liquidacion-banner-item"><span class="liquidacion-banner-cerrado">CERRADO</span></span>
         </span>
     </span>
-    <span class="sr-only">LIQUIDACIÓN -20% EN MUCHOS PRODUCTOS · VER OFERTAS</span>
+    <span class="sr-only">CERRADO</span>
 </a>
 
 <main id="contenido-principal">
@@ -176,11 +176,11 @@
 
         <div class="disponibilidad-estado">
             <h3 id="disponibilidad-titulo">Disponibilidad en tienda</h3>
-            <div id="disponibilidad-icono" class="disponibilidad-icono disponible" aria-hidden="true">
-                <i class="fa-solid fa-circle-check"></i>
+            <div id="disponibilidad-icono" class="disponibilidad-icono no-disponible" aria-hidden="true">
+                <i class="fa-solid fa-circle-xmark"></i>
             </div>
-            <p id="disponibilidad-estado-principal" class="disponibilidad-estado-principal">Disponible</p>
-            <p id="disponibilidad-estado-secundario" class="disponibilidad-estado-secundario"></p>
+            <p id="disponibilidad-estado-principal" class="disponibilidad-estado-principal">No hay disponibilidad en tienda</p>
+            <p id="disponibilidad-estado-secundario" class="disponibilidad-estado-secundario">Ahora mismo este producto no está disponible.</p>
             <p id="disponibilidad-estado-actualizacion" class="disponibilidad-estado-actualizacion"></p>
         </div>
 
@@ -261,8 +261,8 @@
     </div>
 </footer>
 
-<script src="script.js" defer></script>
-<script src="disponibilidad-productos.js" defer></script>
+<script src="script.js?v=20260702-disponibilidad" defer></script>
+<script src="disponibilidad-productos.js?v=20260702-sin-stock" defer></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const datos = window.ComplementosLopez;
@@ -300,45 +300,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const disponibilidadEstadoActualizacion = document.getElementById('disponibilidad-estado-actualizacion');
     let indiceActual = 0;
 
-    function obtenerDisponibilidadProducto(productoId) {
-        const registro = disponibilidadDatos.productos?.[productoId];
-        if (typeof registro?.disponible === 'boolean') {
-            return registro.disponible;
-        }
-
-        return !datos.estaAgotado(productoActivo);
-    }
-
     function abrirVentanaDisponibilidad() {
-        const registro = disponibilidadDatos.productos?.[productoActivo.id];
-        const disponible = obtenerDisponibilidadProducto(productoActivo.id);
-        const disponibilidadConfirmada = typeof registro?.disponible === 'boolean';
+        disponibilidadIcono.classList.remove('disponible');
+        disponibilidadIcono.classList.add('no-disponible');
+        disponibilidadIcono.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
 
-        disponibilidadIcono.classList.toggle('disponible', disponible);
-        disponibilidadIcono.classList.toggle('no-disponible', !disponible);
-        disponibilidadIcono.innerHTML = disponible
-            ? '<i class="fa-solid fa-circle-check"></i>'
-            : '<i class="fa-solid fa-circle-xmark"></i>';
+        disponibilidadEstadoPrincipal.textContent = 'No hay disponibilidad en tienda';
 
-        disponibilidadEstadoPrincipal.textContent = disponible
-            ? 'Disponible en tienda'
-            : 'Ahora mismo no figura disponible en tienda';
-
-        disponibilidadEstadoSecundario.textContent = disponible
-            ? disponibilidadConfirmada
-                ? `Este producto aparece marcado como disponible para visita en tienda física. Si quieres, puedes venir a verlo y confirmar detalles allí mismo.`
-                : `No hay un registro manual de disponibilidad para este producto, pero ahora mismo figura activo en el catálogo web.`
-            : disponibilidadConfirmada
-                ? `Este producto aparece marcado como no disponible en este momento. Aún así, te recomendamos acercarte a la tienda por si hay reposición o alternativas parecidas.`
-                : `No hay un registro manual de disponibilidad para este producto y en la web figura como no disponible en este momento.`;
+        disponibilidadEstadoSecundario.textContent = 'Ahora mismo este producto no está disponible.';
 
         disponibilidadEstadoActualizacion.textContent = disponibilidadDatos.actualizacion
-            ? disponibilidadConfirmada
-                ? `Estado revisado en el archivo de disponibilidad: ${disponibilidadDatos.actualizacion}`
-                : `Estado inferido a partir del catálogo web. Última revisión del archivo de disponibilidad: ${disponibilidadDatos.actualizacion}`
-            : disponibilidadConfirmada
-                ? ''
-                : 'Estado inferido a partir del catálogo web.';
+            ? `Estado actualizado: ${disponibilidadDatos.actualizacion}`
+            : '';
 
         disponibilidadBackdrop.hidden = false;
         document.body.classList.add('modal-disponibilidad-abierta');

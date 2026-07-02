@@ -2206,83 +2206,11 @@ function actualizarContadorHorario() {
   const contadores = [...document.querySelectorAll('.contador-horario, #contador-horario')];
   if (!contadores.length) return;
 
-  const ahora = new Date();
-  const dia = ahora.getDay();
-  const hora = ahora.getHours();
-  const minutos = ahora.getMinutes();
-  const ahoraMin = hora * 60 + minutos;
-
-  const horarios = {
-    1: [[600, 810], [1020, 1200]],
-    2: [[600, 810], [1020, 1200]],
-    3: [[600, 810], [1020, 1200]],
-    4: [[600, 810], [1020, 1200]],
-    5: [[600, 810], [1020, 1200]],
-    6: [[600, 840]],
-    0: []
-  };
-
-  const hoy = horarios[dia];
-
-  function formato(min) {
-    const h = Math.floor(min / 60);
-    const m = min % 60;
-    return `${h}h ${m}m`;
-  }
-
-  let abierto = false;
-  let tiempoRestante = 0;
-
-  if (hoy.length > 0) {
-    for (const tramo of hoy) {
-      if (ahoraMin >= tramo[0] && ahoraMin <= tramo[1]) {
-        abierto = true;
-        tiempoRestante = tramo[1] - ahoraMin;
-      }
-    }
-  }
-
-  function pintarContadores(texto, estadoAbierto) {
-    contadores.forEach(contador => {
-      contador.classList.toggle('abierto', estadoAbierto);
-      contador.classList.toggle('cerrado', !estadoAbierto);
-      contador.textContent = texto;
-    });
-  }
-
-  if (abierto) {
-    pintarContadores(`Abierto · Cierra en ${formato(tiempoRestante)}`, true);
-    return;
-  }
-
-  let encontrado = false;
-
-  for (let i = 0; i < 7 && !encontrado; i += 1) {
-    const siguienteDia = (dia + i) % 7;
-    const tramos = horarios[siguienteDia];
-    if (!tramos.length) continue;
-
-    for (const tramo of tramos) {
-      const inicio = tramo[0];
-      let diferencia;
-
-      if (i === 0 && ahoraMin < inicio) {
-        diferencia = inicio - ahoraMin;
-      } else if (i > 0) {
-        diferencia = (1440 - ahoraMin) + (i - 1) * 1440 + inicio;
-      } else {
-        continue;
-      }
-
-      pintarContadores(`Cerrado · Abre en ${formato(diferencia)}`, false);
-      encontrado = true;
-      break;
-    }
-  }
-
-  if (!encontrado) {
-    pintarContadores('Cerrado', false);
-  }
+  contadores.forEach(contador => {
+    contador.classList.remove('abierto');
+    contador.classList.add('cerrado');
+    contador.textContent = 'Cerrado';
+  });
 }
 
 function inicializarMapasExternos() {

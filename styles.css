@@ -352,6 +352,19 @@ body.menu-movil-abierto {
   font-weight: 900;
 }
 
+.liquidacion-banner-cerrado {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-right: 8px;
+  background: rgba(52, 28, 22, 0.52);
+  border: 1px solid rgba(255, 231, 184, 0.4);
+  color: #ffe5b8;
+  font-weight: 900;
+}
+
 .liquidacion-banner-punto {
   color: #f0c987;
   font-weight: 900;
@@ -969,6 +982,36 @@ body.menu-movil-abierto {
 
 .tabla-horario td {
   background: white;
+}
+
+.horario-tachado {
+  position: relative;
+  display: inline-block;
+  margin-right: 14px;
+  color: #7b7069;
+}
+
+.horario-tachado::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  top: 50%;
+  height: 2px;
+  border-radius: 999px;
+  background: #8f332c;
+  transform: rotate(-2deg);
+}
+
+.horario-cerrado {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #f4e7df;
+  color: #8f332c;
+  font-weight: 800;
+  white-space: nowrap;
 }
 
 /* MAPA */
